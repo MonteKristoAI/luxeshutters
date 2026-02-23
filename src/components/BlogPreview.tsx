@@ -4,11 +4,19 @@ import { Button } from "@/components/ui/button";
 import { BLOG_POSTS } from "@/data/clinicData";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-import blogLandscapingTips from "@/assets/blog-landscaping-tips.jpg";
+import galleryWork23 from "@/assets/gallery-work-23.jpg";
+import galleryWork1 from "@/assets/gallery-work-1.jpg";
+import galleryWork20 from "@/assets/gallery-work-20.jpg";
+import galleryWork25 from "@/assets/gallery-work-25.jpg";
+import galleryWork29 from "@/assets/gallery-work-29.jpg";
 import blogBg from "@/assets/why-choose-landscaping.jpg";
 
 const imageMap: Record<string, string> = {
-  "blog-landscaping-tips": blogLandscapingTips
+  "blog-1": galleryWork23,
+  "blog-2": galleryWork25,
+  "blog-3": galleryWork1,
+  "blog-4": galleryWork29,
+  "blog-5": galleryWork20,
 };
 
 export default function BlogPreview() {
@@ -32,7 +40,7 @@ export default function BlogPreview() {
         <div className={`max-w-3xl mx-auto scroll-fade ${isVisible ? "visible" : ""}`}>
           <div className="bg-card rounded-2xl overflow-hidden shadow-elevated group">
             <div className="h-64 md:h-80 overflow-hidden">
-              <img src={imageMap[featured.image] || blogLandscapingTips} alt={featured.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <img src={imageMap[featured.image] || galleryWork23} alt={featured.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
             </div>
             <div className="p-6 md:p-8">
               <div className="flex items-center gap-3 mb-3">
@@ -49,6 +57,6 @@ export default function BlogPreview() {
           </div>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 }
