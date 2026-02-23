@@ -31,26 +31,6 @@ export default function Header() {
 
   useEffect(() => { setMobileOpen(false); }, [location]);
 
-  // Handle hash scrolling after navigation
-  useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.replace("#", "");
-      setTimeout(() => {
-        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
-    }
-  }, [location]);
-
-  const handleNavClick = (item: (typeof NAV_ITEMS)[0]) => {
-    if (item.anchor) {
-      if (location.pathname === "/") {
-        document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
-      } else {
-        navigate("/#about");
-      }
-    }
-  };
-
   const scrollToBooking = () => {
     if (location.pathname === "/") {
       document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" });
@@ -72,7 +52,7 @@ export default function Header() {
         <nav className="hidden lg:flex items-center gap-1">
           {NAV_ITEMS.map((item) =>
             item.anchor ? (
-              <button key={item.label} onClick={() => handleNavClick(item)} className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg ${isDark ? "text-[#2B3540] hover:text-primary" : "text-white/90 hover:text-white"}`}>{item.label}</button>
+              <a key={item.label} href={item.href} className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg ${isDark ? "text-[#2B3540] hover:text-primary" : "text-white/90 hover:text-white"}`}>{item.label}</a>
             ) : (
               <Link key={item.label} to={item.href} className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg ${isDark ? "text-[#2B3540] hover:text-primary" : "text-white/90 hover:text-white"}`}>{item.label}</Link>
             )
@@ -94,7 +74,7 @@ export default function Header() {
           <nav className="container mx-auto py-4 px-4 flex flex-col gap-1">
             {NAV_ITEMS.map((item) =>
               item.anchor ? (
-                <button key={item.label} onClick={() => handleNavClick(item)} className="px-4 py-3 text-left text-foreground/80 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors">{item.label}</button>
+                <a key={item.label} href={item.href} className="px-4 py-3 text-left text-foreground/80 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors">{item.label}</a>
               ) : (
                 <Link key={item.label} to={item.href} className="px-4 py-3 text-foreground/80 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors">{item.label}</Link>
               )
