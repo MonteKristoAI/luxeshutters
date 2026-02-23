@@ -36,7 +36,7 @@ export default function HeroSection() {
           src={heroImage}
           alt="Luxurious living room with premium plantation shutters"
           className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1a1f2e]/85 via-[#1a1f2e]/55 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1a1f2e]/95 via-[#1a1f2e]/75 to-[#1a1f2e]/30" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10 py-32 lg:py-40">
@@ -45,7 +45,7 @@ export default function HeroSection() {
             Where Style Meets Everyday Comfort.
           </p>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
-            Creating LIVING spaces people LOVE
+            Creating <span className="text-accent">LIVING</span> spaces people <span className="text-accent">LOVE</span>
           </h1>
           <p className="text-lg md:text-xl text-white/75 mb-8 leading-relaxed">
             Luxe Shutters brings style and comfort to your home with premium shutters, blinds, and curtains designed for living spaces you'll truly enjoy.
