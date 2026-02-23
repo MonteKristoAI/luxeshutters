@@ -274,19 +274,19 @@ export default function Services() {
           <img src={serviceShutters} alt="" className="w-full h-full object-cover" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, hsl(210 20% 95% / 0.92), hsl(210 18% 97% / 0.94))' }} />
         </div>
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <h2 className="text-center font-serif text-2xl font-bold text-foreground sm:text-3xl mb-10">Common questions</h2>
-          <div className="mx-auto max-w-2xl">
-            <Accordion type="single" collapsible className="space-y-3">
-              {FAQS.map((faq, i) =>
-              <AccordionItem key={i} value={`faq-${i}`} className="rounded-xl border border-border/60 bg-card px-5 shadow-sm">
-                  <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline py-4">{faq.q}</AccordionTrigger>
-                  
-                </AccordionItem>
-              )}
-            </Accordion>
-          </div>
-        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
       </section>
 
       <section className="bg-primary/5 py-14 md:py-18 text-center">
