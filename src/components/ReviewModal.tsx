@@ -68,7 +68,7 @@ export default function ReviewModal({ open, onClose }: Props) {
 
         {step === "rating" && (
           <div className="animate-fade-in">
-            <p className="text-sm text-muted-foreground mb-6">How was your experience with MonteKristo Windows & Doors?</p>
+            <p className="text-sm text-muted-foreground mb-6">How was your experience with Luxe Shutters?</p>
             <div className="flex gap-1 justify-center mb-8">
               {[1, 2, 3, 4, 5].map((s) => (
                 <button key={s} onMouseEnter={() => setHover(s)} onMouseLeave={() => setHover(0)} onClick={() => setRating(s)}>

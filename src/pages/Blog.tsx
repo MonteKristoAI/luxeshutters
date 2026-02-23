@@ -34,8 +34,8 @@ export default function Blog() {
         <section className="pt-32 pb-16 bg-secondary/50">
           <div className="container mx-auto px-4 lg:px-8 text-center">
             <span className="text-sm font-medium text-primary tracking-widest uppercase mb-3 block">Our blog</span>
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Tips, Guides & Window Insights</h1>
-            <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed">Practical window and door advice from our team — no jargon, just clear answers to questions homeowners actually ask.</p>
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Tips, Guides & Window Furnishing Insights</h1>
+            <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed">Practical advice on shutters, blinds, curtains, and more from our team — no jargon, just clear answers to questions homeowners actually ask.</p>
           </div>
         </section>
 

@@ -7,12 +7,12 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
 
 const serviceOptions = [
-"Lawn Care",
-"Garden Design",
-"Planting & Maintenance",
-"Irrigation Systems",
-"Outdoor Transformation",
-"Landscaping Consultation",
+"Shutters",
+"Blinds",
+"Curtains",
+"Zipscreens",
+"Awnings",
+"Security Roller Shutters",
 "General Estimate"];
 
 
@@ -40,11 +40,11 @@ export default function BookingSection() {
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="max-w-lg mx-auto text-center bg-card rounded-2xl p-10 shadow-elevated animate-scale-in">
             <CheckCircle2 className="w-16 h-16 text-primary mx-auto mb-6" />
-            <h2 className="font-serif text-2xl font-bold text-foreground mb-4">Landscaping estimate request received</h2>
+            <h2 className="font-serif text-2xl font-bold text-foreground mb-4">Quote request received</h2>
             <p className="text-muted-foreground mb-2"><strong>{form.firstName} {form.lastName}</strong> — {service}</p>
             <p className="text-muted-foreground mb-2">{form.address}, {form.city}</p>
             <p className="text-muted-foreground mb-6">Timeline: {urgency}</p>
-            <p className="text-sm text-muted-foreground">We'll contact you within 1 business day to schedule your landscaping consultation.</p>
+            <p className="text-sm text-muted-foreground">We'll contact you within 1 business day to schedule your free consultation.</p>
           </div>
         </div>
       </section>);
@@ -56,8 +56,8 @@ export default function BookingSection() {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-sm font-medium text-primary tracking-widest uppercase mb-3 block">Start your project</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-sans">Request a free landscaping estimate</h2>
-          <p className="text-muted-foreground leading-relaxed">Tell us about your property, your vision, and your timeline — we'll handle the rest.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-sans">Request a free quote</h2>
+          <p className="text-muted-foreground leading-relaxed">Tell us about your home, your style preferences, and your timeline — we'll handle the rest.</p>
         </div>
 
         <div className={`grid grid-cols-1 lg:grid-cols-3 gap-8 scroll-fade ${isVisible ? "visible" : ""}`}>
@@ -122,15 +122,15 @@ export default function BookingSection() {
                   <div><label className="text-sm text-muted-foreground mb-1 block">Email (optional)</label><Input value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} /></div>
                 </div>
                 <div className="bg-muted/50 rounded-xl p-5 mb-6">
-                  <h4 className="font-serif font-semibold text-foreground mb-3">Estimate request summary</h4>
+                  <h4 className="font-serif font-semibold text-foreground mb-3">Quote request summary</h4>
                   <div className="grid grid-cols-2 gap-2 text-sm">
-                    <span className="text-muted-foreground">Service:</span><span className="text-foreground">{service}</span>
+                    <span className="text-muted-foreground">Product:</span><span className="text-foreground">{service}</span>
                     <span className="text-muted-foreground">Timeline:</span><span className="text-foreground">{urgency}</span>
                     <span className="text-muted-foreground">Location:</span><span className="text-foreground">{form.address}, {form.city}</span>
                   </div>
                 </div>
-                <Button variant="hero" size="lg" className="w-full" onClick={handleSubmit} disabled={!form.firstName || !form.lastName || !form.phone}>Submit estimate request</Button>
-                <p className="text-xs text-muted-foreground text-center mt-3">We'll contact you within 1 business day to schedule your free landscaping consultation.</p>
+                <Button variant="hero" size="lg" className="w-full" onClick={handleSubmit} disabled={!form.firstName || !form.lastName || !form.phone}>Submit quote request</Button>
+                <p className="text-xs text-muted-foreground text-center mt-3">We'll contact you within 1 business day to schedule your free consultation.</p>
               </div>
             }
           </div>

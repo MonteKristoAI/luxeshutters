@@ -3,8 +3,6 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CLINIC } from "@/data/clinicData";
-import logoBlack from "@/assets/logo-black.png";
-import logoWhite from "@/assets/logo-white.png";
 
 const NAV_ITEMS = [
   { label: "Home", href: "/" },
@@ -55,10 +53,9 @@ export default function Header() {
     <header className={`fixed left-0 right-0 z-50 transition-all duration-300 top-0 lg:top-[44px] ${isDark ? "bg-[#F0F4F8] shadow-soft" : "bg-transparent"}`}>
       <div className="container mx-auto flex items-center justify-between py-4 px-4 lg:px-8">
         <Link to="/" className="flex items-center gap-2.5 group">
-          <img src={isDark ? logoBlack : logoWhite} alt={CLINIC.name} className="h-9 w-auto" />
           <div className="flex flex-col">
-            <span className={`font-serif font-semibold text-lg leading-tight transition-colors duration-300 ${isDark ? "text-[#1a2332]" : "text-white"}`}>{CLINIC.name}</span>
-            <span className={`text-[10px] tracking-widest uppercase hidden sm:block transition-colors duration-300 ${isDark ? "text-[#6b7d8e]" : "text-white/60"}`}>Windows & Doors Installation</span>
+            <span className={`font-serif font-bold text-xl leading-tight transition-colors duration-300 ${isDark ? "text-[#1a2332]" : "text-white"}`}>{CLINIC.name}</span>
+            <span className={`text-[10px] tracking-widest uppercase hidden sm:block transition-colors duration-300 ${isDark ? "text-[#6b7d8e]" : "text-white/60"}`}>Shutters · Blinds · Curtains</span>
           </div>
         </Link>
 
@@ -74,7 +71,7 @@ export default function Header() {
 
         <div className="hidden lg:flex items-center gap-3">
           <a href={`tel:${CLINIC.phone.replace(/[^\d+]/g, "")}`} className={`flex items-center gap-1.5 text-sm transition-colors ${isDark ? "text-[#2B3540] hover:text-primary" : "text-white/90 hover:text-white"}`}><Phone className="w-3.5 h-3.5" />{CLINIC.phone}</a>
-          <Button size="default" onClick={scrollToBooking} className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium">Free estimate</Button>
+          <Button size="default" onClick={scrollToBooking} className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium">Get a Free Quote</Button>
         </div>
 
         <button className="lg:hidden p-2 text-foreground" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
@@ -93,7 +90,7 @@ export default function Header() {
               )
             )}
             <div className="border-t border-border mt-2 pt-3">
-              <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-medium" onClick={scrollToBooking}>Free estimate</Button>
+              <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-medium" onClick={scrollToBooking}>Get a Free Quote</Button>
             </div>
           </nav>
         </div>

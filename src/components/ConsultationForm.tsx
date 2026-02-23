@@ -9,7 +9,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const benefits = [
 { icon: Phone, text: "Free phone consultation" },
-{ icon: Clock, text: "On-site evaluations available" },
+{ icon: Clock, text: "In-home showroom visits available" },
 { icon: Shield, text: "No obligation — just honest advice" }];
 
 
@@ -40,11 +40,11 @@ const ConsultationForm = ({ showMap = true }: {showMap?: boolean;}) => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
             <span className="text-sm font-medium tracking-widest uppercase mb-4 block" style={{ color: 'hsl(210 65% 65%)' }}>Get in Touch</span>
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-5 leading-tight" style={{ color: 'hsl(210 20% 95%)' }}>Your Dream Windows and Doors Are Just One Call 
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-5 leading-tight" style={{ color: 'hsl(210 20% 95%)' }}>Your Dream Window Furnishings Are Just
               <br />One Call Away
             </h2>
             <p className="text-base leading-relaxed mb-8 max-w-md" style={{ color: 'hsl(215 10% 60%)' }}>
-              Whether you're planning a new garden, need regular lawn care, or want a complete outdoor transformation, our team is ready to help. Request a consultation and we'll be in touch to discuss your vision.
+              Whether you're looking for shutters, blinds, curtains, or outdoor screens, our team is ready to help. Request a consultation and we'll be in touch to discuss your vision.
             </p>
             <ul className="space-y-4">
               {benefits.map((b) =>
@@ -74,9 +74,9 @@ const ConsultationForm = ({ showMap = true }: {showMap?: boolean;}) => {
               </div>
               <div className="space-y-1.5">
                 <Label htmlFor="cf-message" className="text-white/80">Message{" "}<span className="text-white/40 font-normal">(optional)</span></Label>
-                <Textarea id="cf-message" name="message" maxLength={1000} rows={3} placeholder="Tell us about your landscaping project…" className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-primary/50" />
+                <Textarea id="cf-message" name="message" maxLength={1000} rows={3} placeholder="Tell us about your project…" className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-primary/50" />
               </div>
-              <Button type="submit" variant="hero" size="lg" className="w-full" disabled={loading}>{loading ? "Sending…" : "Request a Free Landscaping Consultation"}</Button>
+              <Button type="submit" variant="hero" size="lg" className="w-full" disabled={loading}>{loading ? "Sending…" : "Request a Free Consultation"}</Button>
               <p className="text-xs text-white/40 text-center">We respect your privacy and will never share your details.</p>
             </form>
           </div>
@@ -84,7 +84,7 @@ const ConsultationForm = ({ showMap = true }: {showMap?: boolean;}) => {
 
         {showMap &&
         <div className="mt-10 rounded-2xl overflow-hidden border border-border/60 shadow-sm opacity-80">
-            <iframe title="MonteKristo Landscaping location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200000!2d-111.9261!3d33.4942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b08d0ac17c001%3A0x1fce4d2c63c0c4c5!2sScottsdale%2C+AZ!5e0!3m2!1sen!2sus!4v1700000000000" width="100%" height="210" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="w-full grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
+            <iframe title="Luxe Shutters location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200000!2d-111.9261!3d33.4942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b08d0ac17c001%3A0x1fce4d2c63c0c4c5!2sScottsdale%2C+AZ!5e0!3m2!1sen!2sus!4v1700000000000" width="100%" height="210" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="w-full grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
           </div>
         }
       </div>

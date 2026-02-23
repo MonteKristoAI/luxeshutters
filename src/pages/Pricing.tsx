@@ -91,7 +91,7 @@ export default function Pricing() {
         <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
           <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-widest text-white/90">Our Pricing</span>
           <h1 className="font-serif text-3xl font-bold text-white sm:text-4xl md:text-5xl">Transparent, estimate-based pricing</h1>
-          <p className="mx-auto mt-4 max-w-xl text-white/80">Free on-site consultations before every project. No hidden fees, no surprises — just fair pricing for expert window and door installation.</p>
+          <p className="mx-auto mt-4 max-w-xl text-white/80">Free in-home consultations before every project. No hidden fees, no surprises — just fair pricing for expert shutter, blind, and curtain installation.</p>
         </div>
       </section>
 

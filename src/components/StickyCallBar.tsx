@@ -14,7 +14,7 @@ export default function StickyCallBar() {
             {CLINIC.phone}
           </a>
           <span className="text-xs text-primary-foreground/60 hidden xl:inline">
-            — Professional Window & Door Installation
+            — Premium Shutters, Blinds & Curtains
           </span>
         </div>
         <div className="flex items-center gap-4">

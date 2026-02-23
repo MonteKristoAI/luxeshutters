@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from "lucide-react";
 import { CLINIC } from "@/data/clinicData";
-import logoWhite from "@/assets/logo-white.png";
 
 export default function Footer() {
   return (
@@ -10,11 +9,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <img src={logoWhite} alt={CLINIC.name} className="h-8 w-auto" />
-              <span className="font-serif font-semibold text-lg">{CLINIC.name}</span>
+              <span className="font-serif font-bold text-xl">{CLINIC.name}</span>
             </div>
             <p className="text-primary-foreground/60 text-sm leading-relaxed mb-6">
-              {CLINIC.slogan} Premium window and door installation for the Phoenix metro area — licensed, insured, and certified.
+              {CLINIC.slogan} Premium shutters, blinds, curtains, and outdoor screens — professionally installed across the Phoenix metro area.
             </p>
             <div className="flex gap-3">
               {[Facebook, Instagram, Twitter].map((Icon, i) => (
