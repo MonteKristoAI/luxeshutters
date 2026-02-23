@@ -255,19 +255,19 @@ export default function Services() {
 
       {SERVICES.map((s, i) => <ServiceDetail key={s.id} service={s} index={i} />)}
 
-      <section className="bg-secondary/40 py-14 md:py-18">
-        <div className="container mx-auto px-4 lg:px-8 text-center">
-          <h2 className="font-serif text-2xl font-bold text-foreground sm:text-3xl">Quality craftsmanship. Transparent pricing. No surprises.</h2>
-          <div className="mt-10 grid grid-cols-2 gap-6 sm:gap-8 lg:grid-cols-4">
-            {TRUST_POINTS.map((tp, i) =>
-            <div key={i} className="flex flex-col items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10"><tp.icon className="h-5 w-5 text-primary" /></div>
-                <p className="text-sm font-medium text-foreground">{tp.text}</p>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
+      
+
+
+
+
+
+
+
+
+
+
+
+
 
       <section className="relative py-16 md:py-20 overflow-hidden">
         <div className="absolute inset-0">
