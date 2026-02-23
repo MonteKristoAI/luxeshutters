@@ -2,7 +2,7 @@ export const CLINIC = {
   name: "MonteKristo Windows and Doors",
   slogan: "Better windows. Better doors. Better living.",
   address: "4720 Sunset Blvd, Suite 200, Scottsdale, AZ 85251",
-  phone: "(480) 555-0192",
+  phone: "1800-465-893",
   email: "hello@montekristowindows.com",
   hours: {
     weekday: "Monday – Friday: 7:00am – 6:00pm",
