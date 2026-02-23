@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from "lucide-react";
 import { CLINIC } from "@/data/clinicData";
 
 export default function Footer() {
@@ -15,9 +15,8 @@ export default function Footer() {
               {CLINIC.slogan} Premium shutters, blinds, curtains, and outdoor screens — professionally installed across the Phoenix metro area.
             </p>
             <div className="flex gap-3">
-              {[Facebook, Instagram, Twitter].map((Icon, i) => (
-                <a key={i} href="#" className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-primary/30 flex items-center justify-center transition-colors"><Icon className="w-4 h-4" /></a>
-              ))}
+              <a href="https://www.facebook.com/Luxeshutters" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-primary/30 flex items-center justify-center transition-colors"><Facebook className="w-4 h-4" /></a>
+              <a href="https://www.instagram.com/luxe_shutters" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-primary/30 flex items-center justify-center transition-colors"><Instagram className="w-4 h-4" /></a>
             </div>
           </div>
 
