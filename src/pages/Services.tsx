@@ -269,12 +269,7 @@ export default function Services() {
 
 
 
-      <section className="relative py-16 md:py-20 overflow-hidden">
-        
-
-
-
-        
+      
 
 
 
@@ -287,7 +282,12 @@ export default function Services() {
 
 
 
-      </section>
+
+
+
+
+
+
 
       <section className="bg-primary/5 py-14 md:py-18 text-center">
         <div className="container mx-auto px-4 lg:px-8">
