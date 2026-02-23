@@ -5,17 +5,21 @@ import { BLOG_POSTS } from "@/data/clinicData";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-import serviceWindowReplace from "@/assets/service-window-replace.jpg";
-import serviceEnergyWindows from "@/assets/service-energy-windows.jpg";
-import serviceDoorInstall from "@/assets/service-door-install.jpg";
+import galleryWork23 from "@/assets/gallery-work-23.jpg";
+import galleryWork25 from "@/assets/gallery-work-25.jpg";
+import galleryWork1 from "@/assets/gallery-work-1.jpg";
+import galleryWork29 from "@/assets/gallery-work-29.jpg";
+import galleryWork20 from "@/assets/gallery-work-20.jpg";
 
 const imageMap: Record<string, string> = {
-  "blog-windows-tips": serviceWindowReplace,
-  "blog-windows-value": serviceEnergyWindows,
-  "blog-windows-seasonal": serviceDoorInstall,
+  "blog-1": galleryWork23,
+  "blog-2": galleryWork25,
+  "blog-3": galleryWork1,
+  "blog-4": galleryWork29,
+  "blog-5": galleryWork20,
 };
 
-const categories = ["All", "Planning", "Value", "Design", "Budgeting", "Technology", "Maintenance", "Tips"];
+const categories = ["All", "Tips", "Value", "Design", "Technology", "Maintenance"];
 
 export default function Blog() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -64,7 +68,7 @@ export default function Blog() {
                 {filtered.map((post, i) => (
                   <article key={post.id} className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 group animate-fade-in cursor-pointer" style={{ animationDelay: `${i * 0.06}s` }}>
                     <div className="h-48 overflow-hidden">
-                      <img src={imageMap[post.image] || serviceWindowReplace} alt={post.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+                      <img src={imageMap[post.image] || galleryWork23} alt={post.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
                     </div>
                     <div className="p-5">
                       <div className="flex items-center gap-3 mb-3">
