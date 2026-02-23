@@ -1,50 +1,51 @@
 import { useNavigate } from "react-router-dom";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-import serviceWindowInstall from "@/assets/service-window-install.jpg";
-import serviceWindowReplace from "@/assets/service-window-replace.jpg";
-import serviceDoorInstall from "@/assets/service-door-install.jpg";
-import serviceSlidingDoors from "@/assets/service-sliding-doors.jpg";
-import serviceEnergyWindows from "@/assets/service-energy-windows.jpg";
-import serviceCustomDoors from "@/assets/service-custom-doors.jpg";
+import serviceShutters from "@/assets/service-shutters.jpg";
+import serviceBlinds from "@/assets/service-blinds.jpg";
+import serviceCurtains from "@/assets/service-curtains.jpg";
+import serviceZipscreens from "@/assets/service-zipscreens.jpg";
+import serviceAwnings from "@/assets/service-awnings.jpg";
+import serviceRollerShutters from "@/assets/service-roller-shutters.jpg";
 
 const services = [
-{
-  title: "Window Installation",
-  description: "Professional installation of new windows — double-hung, casement, picture, bay, and specialty shapes — fitted precisely for comfort, insulation, and curb appeal.",
-  image: serviceWindowInstall,
-  anchorId: "window-installation"
-},
-{
-  title: "Window Replacement",
-  description: "Upgrade outdated, drafty, or damaged windows with modern energy-efficient units. We handle removal, fitting, insulation, and trim for a seamless finish.",
-  image: serviceWindowReplace,
-  anchorId: "window-replacement"
-},
-{
-  title: "Door Installation",
-  description: "Entry doors, interior doors, French doors, and patio doors — expertly installed with proper alignment, weatherstripping, and hardware for security and style.",
-  image: serviceDoorInstall,
-  anchorId: "door-installation"
-},
-{
-  title: "Sliding Doors",
-  description: "Smooth-gliding sliding glass doors that connect your living space to the outdoors — energy-efficient glass, durable tracks, and modern frames.",
-  image: serviceSlidingDoors,
-  anchorId: "sliding-doors"
-},
-{
-  title: "Energy-Efficient Windows",
-  description: "Low-E glass, argon-filled panes, and insulated frames that reduce energy bills by up to 30%. ENERGY STAR® certified options available.",
-  image: serviceEnergyWindows,
-  anchorId: "energy-efficient-windows"
-},
-{
-  title: "Custom Doors",
-  description: "Handcrafted and made-to-order doors — from elegant entryways to unique interior designs — tailored to your home's style and dimensions.",
-  image: serviceCustomDoors,
-  anchorId: "custom-doors"
-}];
+  {
+    title: "Shutters",
+    description: "Our shutters combine timeless elegance with exceptional craftsmanship, adding a touch of sophistication to any space.",
+    image: serviceShutters,
+    anchorId: "shutters",
+  },
+  {
+    title: "Blinds",
+    description: "With their versatility and functionality, our blinds are the perfect blend of fashion and practicality.",
+    image: serviceBlinds,
+    anchorId: "blinds",
+  },
+  {
+    title: "Curtains",
+    description: "From sheer elegance to opulent drapes, our curtains offer a wide range of options to suit your personal taste and interior decor.",
+    image: serviceCurtains,
+    anchorId: "curtains",
+  },
+  {
+    title: "Zipscreens",
+    description: "Sleek design, smooth operation, and customizable options, our zip screens seamlessly blend into your existing architecture.",
+    image: serviceZipscreens,
+    anchorId: "zipscreens",
+  },
+  {
+    title: "Awnings",
+    description: "Our awnings provide the perfect shade solution, protecting you from the scorching sun while adding a touch of elegance.",
+    image: serviceAwnings,
+    anchorId: "awnings",
+  },
+  {
+    title: "Security Roller Shutters",
+    description: "Designed to protect your windows and doors, our shutters offer a robust defense against intruders, while adding a layer of privacy and insulation.",
+    image: serviceRollerShutters,
+    anchorId: "security-roller-shutters",
+  },
+];
 
 
 export default function ServicesPreview() {
@@ -82,7 +83,7 @@ export default function ServicesPreview() {
             <span className="text-primary">your home.</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            From window replacement and door installation to energy-efficient upgrades — we help you create the home you've always wanted.
+            From premium shutters and blinds to curtains and outdoor solutions — we help you create the living space you've always wanted.
           </p>
         </div>
 

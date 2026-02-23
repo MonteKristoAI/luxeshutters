@@ -19,138 +19,115 @@ import {
 } from "@/components/ui/accordion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-import windowsOffice from "@/assets/windows-office.jpg";
-import serviceWindowInstall from "@/assets/service-window-install.jpg";
-import serviceWindowReplace from "@/assets/service-window-replace.jpg";
-import serviceDoorInstall from "@/assets/service-door-install.jpg";
-import serviceSlidingDoors from "@/assets/service-sliding-doors.jpg";
-import serviceEnergyWindows from "@/assets/service-energy-windows.jpg";
-import serviceCustomDoors from "@/assets/service-custom-doors.jpg";
-import serviceWindowRepair from "@/assets/service-window-repair.jpg";
-import serviceCommercialWindows from "@/assets/service-commercial-windows.jpg";
+import serviceShutters from "@/assets/service-shutters.jpg";
+import serviceBlinds from "@/assets/service-blinds.jpg";
+import serviceCurtains from "@/assets/service-curtains.jpg";
+import serviceZipscreens from "@/assets/service-zipscreens.jpg";
+import serviceAwnings from "@/assets/service-awnings.jpg";
+import serviceRollerShutters from "@/assets/service-roller-shutters.jpg";
 
 const SERVICES = [
   {
-    id: "window-installation",
-    title: "Window Installation",
-    pill: "Installation",
-    image: serviceWindowInstall,
-    summary: "Professional installation of new windows — double-hung, casement, picture, bay, and specialty shapes — fitted precisely for comfort, insulation, and curb appeal.",
-    intro: "We handle every aspect of new window installation — from precise measurements and product selection to expert fitting, insulation, and trim work. Our certified installers ensure every window is level, sealed, and beautiful.",
-    timeline: ["Schedule a free in-home consultation", "Window measurement and product selection", "Custom order and scheduling", "Professional installation day", "Insulation, trim, and finishing", "Final walkthrough and cleanup"],
-    goodToKnow: ["All major window brands and styles available", "ENERGY STAR® certified options standard", "Includes weatherstripping and proper insulation"],
+    id: "shutters",
+    title: "Shutters",
+    pill: "Shutters",
+    image: serviceShutters,
+    summary: "Our shutters combine timeless elegance with exceptional craftsmanship, adding a touch of sophistication to any space.",
+    intro: "Transform your home with our premium plantation shutters. Available in a range of materials and finishes, our shutters offer superior light control, privacy, and insulation while adding a timeless aesthetic to any room.",
+    timeline: ["Free in-home consultation & measurement", "Material and style selection", "Custom manufacturing to your specs", "Professional installation", "Final adjustments and quality check", "Care and maintenance walkthrough"],
+    goodToKnow: ["Custom-made to fit any window shape or size", "Available in timber, PVC, and aluminium", "Increases property value and street appeal"],
   },
   {
-    id: "window-replacement",
-    title: "Window Replacement",
-    pill: "Replacement",
-    image: serviceWindowReplace,
-    summary: "Upgrade outdated, drafty, or damaged windows with modern energy-efficient units. We handle removal, fitting, insulation, and trim for a seamless finish.",
-    intro: "Old windows waste energy and compromise comfort. We remove your existing windows and replace them with high-performance units that reduce energy bills, block noise, and look stunning. Every replacement includes proper insulation and interior/exterior trim.",
-    timeline: ["In-home assessment and energy analysis", "Product recommendation and quote", "Custom window ordering", "Old window removal and disposal", "New window installation and sealing", "Trim, caulking, and final inspection"],
-    goodToKnow: ["Most replacements completed in one day", "We dispose of all old windows and materials", "Manufacturer warranties on all products"],
+    id: "blinds",
+    title: "Blinds",
+    pill: "Blinds",
+    image: serviceBlinds,
+    summary: "With their versatility and functionality, our blinds are the perfect blend of fashion and practicality.",
+    intro: "Our blinds come in a wide variety of styles — roller, venetian, vertical, and more — designed to suit every room and budget. With motorised options and a huge range of fabrics and colours, you'll find the perfect fit for your space.",
+    timeline: ["In-home consultation and window assessment", "Style and fabric selection", "Precise measurement", "Custom manufacturing", "Professional installation", "Operation walkthrough"],
+    goodToKnow: ["Motorised and smart-home compatible options", "Block-out and sunscreen fabrics available", "Child-safe designs as standard"],
   },
   {
-    id: "door-installation",
-    title: "Door Installation",
-    pill: "Doors",
-    image: serviceDoorInstall,
-    summary: "Entry doors, interior doors, French doors, and patio doors — expertly installed with proper alignment, weatherstripping, and hardware for security and style.",
-    intro: "A new door transforms your home's entrance, security, and energy efficiency. We install entry doors, French doors, patio doors, and interior doors with precise fitting, proper weatherstripping, and quality hardware. Every door is checked for smooth operation and a perfect seal.",
-    timeline: ["Consultation and door selection", "Precise opening measurement", "Door and hardware ordering", "Old door removal", "Professional installation and alignment", "Hardware, weatherstripping, and finishing"],
-    goodToKnow: ["Wide selection of materials: wood, fiberglass, steel", "Smart lock and security hardware options", "All doors include proper weatherstripping"],
+    id: "curtains",
+    title: "Curtains",
+    pill: "Curtains",
+    image: serviceCurtains,
+    summary: "From sheer elegance to opulent drapes, our curtains offer a wide range of options to suit your personal taste and interior decor.",
+    intro: "Add warmth, texture, and style to your home with our premium curtain range. From sheer voiles to heavy block-out drapes, we offer an extensive collection of fabrics, colours, and heading styles to complement any interior.",
+    timeline: ["Design consultation", "Fabric selection and sampling", "Precise window measurement", "Custom tailoring and manufacturing", "Professional fitting and hanging", "Styling and final adjustments"],
+    goodToKnow: ["Huge range of fabrics and colours", "S-fold, pinch pleat, and eyelet heading styles", "Block-out and thermal lining options"],
   },
   {
-    id: "sliding-doors",
-    title: "Sliding Doors",
-    pill: "Sliding",
-    image: serviceSlidingDoors,
-    summary: "Smooth-gliding sliding glass doors that connect your living space to the outdoors — energy-efficient glass, durable tracks, and modern frames.",
-    intro: "Sliding doors bring the outdoors in with expansive glass panels and smooth operation. We install standard sliding doors, multi-panel systems, and pocket sliding doors with energy-efficient glass, durable track systems, and modern frame options.",
-    timeline: ["In-home consultation and measurement", "Product selection and configuration", "Structural assessment (if needed)", "Professional installation", "Track alignment and operation testing", "Cleanup and walkthrough"],
-    goodToKnow: ["Multi-panel and pocket door options available", "Low-E and tinted glass options", "Child-safe locking mechanisms included"],
+    id: "zipscreens",
+    title: "Zipscreens",
+    pill: "Zipscreens",
+    image: serviceZipscreens,
+    summary: "Sleek design, smooth operation, and customizable options, our zip screens seamlessly blend into your existing architecture.",
+    intro: "Zipscreens are the modern solution for outdoor living areas. With a patented zip-guided system, they provide superior wind resistance, UV protection, and insect control while maintaining your view and airflow.",
+    timeline: ["Site assessment and consultation", "Product and colour selection", "Precise measurement of openings", "Custom manufacturing", "Professional installation", "Motor programming and testing"],
+    goodToKnow: ["Wind-rated for exposed areas", "UV protection up to 99%", "Motorised with remote or smart-home control"],
   },
   {
-    id: "energy-efficient-windows",
-    title: "Energy-Efficient Windows",
-    pill: "Energy",
-    image: serviceEnergyWindows,
-    summary: "Low-E glass, argon-filled panes, and insulated frames that reduce energy bills by up to 30%. ENERGY STAR® certified options available.",
-    intro: "Energy-efficient windows are one of the best investments you can make in your home. We offer Low-E coatings, argon and krypton gas fills, triple-pane options, and thermally broken frames that dramatically reduce heat transfer, UV damage, and energy costs.",
-    timeline: ["Energy audit and efficiency assessment", "Product comparison and recommendations", "Window ordering with efficiency specs", "Professional installation", "Performance verification", "Energy savings documentation"],
-    goodToKnow: ["Up to 30% reduction in energy bills", "UV protection for furniture and flooring", "May qualify for energy tax credits"],
+    id: "awnings",
+    title: "Awnings",
+    pill: "Awnings",
+    image: serviceAwnings,
+    summary: "Our awnings provide the perfect shade solution, protecting you from the scorching sun while adding a touch of elegance.",
+    intro: "Extend your outdoor living with our range of retractable and fixed awnings. Designed to withstand harsh conditions, our awnings provide shade, reduce indoor temperatures, and add style to your home's exterior.",
+    timeline: ["On-site consultation and measurement", "Style and fabric selection", "Engineering and structural assessment", "Custom manufacturing", "Professional installation", "Operation and care guide"],
+    goodToKnow: ["Retractable and fixed options available", "Reduces indoor temperatures significantly", "Weather-resistant fabrics and frames"],
   },
   {
-    id: "custom-doors",
-    title: "Custom Doors",
-    pill: "Custom",
-    image: serviceCustomDoors,
-    summary: "Handcrafted and custom-sized doors in wood, fiberglass, and steel — designed to match your home's architecture and personal style.",
-    intro: "When standard sizes won't do, we create custom solutions. From oversized entry doors with decorative glass to unique interior doors and arched transoms, our custom door service delivers exactly what your home needs. We work with premium materials and skilled craftsmen.",
-    timeline: ["Design consultation and style selection", "Precise measurement and specifications", "Custom fabrication (4–8 weeks)", "Professional installation", "Hardware and finishing", "Final inspection and care guide"],
-    goodToKnow: ["Available in wood, fiberglass, steel, and iron", "Decorative glass and sidelights available", "Custom sizing for non-standard openings"],
-  },
-  {
-    id: "repairs",
-    title: "Repairs & Maintenance",
-    pill: "Repairs",
-    image: serviceWindowRepair,
-    summary: "Window seal repairs, glass replacement, hardware fixes, weatherstripping, and door realignment — keeping everything working like new.",
-    intro: "Not everything needs a full replacement. We repair foggy glass, failed seals, broken hardware, stuck windows, misaligned doors, and worn weatherstripping. Our repair service extends the life of your existing windows and doors at a fraction of replacement cost.",
-    timeline: ["Schedule a repair assessment", "Diagnose the issue on-site", "Provide repair options and quote", "Complete the repair", "Test operation and sealing", "Provide maintenance recommendations"],
-    goodToKnow: ["Same-day repairs available for simple fixes", "We service all major window and door brands", "Preventive maintenance plans available"],
-  },
-  {
-    id: "commercial",
-    title: "Commercial Installations",
-    pill: "Commercial",
-    image: serviceCommercialWindows,
-    summary: "Storefront windows, commercial entry systems, and large-scale glazing projects — built to code with professional-grade materials.",
-    intro: "From retail storefronts to office buildings, we handle commercial window and door installations with professional-grade materials and code-compliant workmanship. Our team manages projects of all sizes with minimal disruption to your business operations.",
-    timeline: ["Site assessment and scope evaluation", "Product specification and engineering", "Permitting and compliance review", "Phased installation plan", "Professional installation", "Final inspection and documentation"],
-    goodToKnow: ["ADA-compliant door systems", "Commercial-grade security hardware", "After-hours installation available"],
+    id: "security-roller-shutters",
+    title: "Security Roller Shutters",
+    pill: "Security",
+    image: serviceRollerShutters,
+    summary: "Designed to protect your windows and doors, our shutters offer a robust defense against intruders, while adding a layer of privacy and insulation.",
+    intro: "Our security roller shutters provide peace of mind with robust protection against break-ins, storms, and extreme weather. They also offer excellent insulation, noise reduction, and complete light block-out when closed.",
+    timeline: ["Security assessment and consultation", "Product and colour selection", "Precise measurement", "Custom manufacturing", "Professional installation", "Motor setup and security testing"],
+    goodToKnow: ["Insurance-approved security solution", "Excellent noise and thermal insulation", "Motorised with key-switch or remote control"],
   },
 ];
 
 const TRUST_POINTS = [
   { icon: MessageSquare, text: "Clear, jargon-free communication" },
   { icon: Shield, text: "Licensed and insured" },
-  { icon: Zap, text: "Energy-efficiency experts" },
+  { icon: Zap, text: "Quality craftsmanship" },
   { icon: ClipboardList, text: "Free in-home measurements" },
 ];
 
 const FAQS = [
   {
-    q: "How long does a window replacement take?",
-    a: "Most single windows take 1–2 hours. A full-home replacement (10–20 windows) typically takes 2–4 days. We provide detailed timelines during your consultation.",
+    q: "How long does installation take?",
+    a: "Most standard installations take 1–3 hours per window. Larger projects like whole-home shutters or zipscreens may take 1–2 days. We provide detailed timelines during your consultation.",
   },
   {
     q: "Do you offer free estimates?",
     a: "Yes. In-home consultations and estimates are completely free with no obligation. We provide detailed written proposals with transparent pricing.",
   },
   {
-    q: "How much do new windows cost?",
-    a: "Costs vary by window type, size, and glass options. Standard replacements start at $350/window, bay windows from $1,500, and full-home packages from $5,000. We provide personalized quotes during your consultation.",
+    q: "What products do you recommend for maximum privacy?",
+    a: "Shutters and security roller shutters offer the best privacy. Block-out blinds and curtains with thermal lining are also excellent options for bedrooms and living areas.",
   },
   {
     q: "Are you licensed and insured?",
-    a: "Absolutely. We're licensed contractors with full liability insurance, workers' compensation coverage, and certified installers on every crew.",
+    a: "Absolutely. We're fully licensed and insured with experienced installers on every project.",
   },
   {
-    q: "Will new windows really save energy?",
-    a: "Yes. Energy-efficient windows with Low-E coatings and argon gas fills typically reduce energy bills by 20–30%. Many of our customers see even greater savings, especially when replacing old single-pane windows.",
+    q: "Do you offer motorised options?",
+    a: "Yes! Most of our products are available with motorised operation, including smart-home integration with remotes, wall switches, or app control.",
   },
   {
     q: "What about warranty coverage?",
-    a: "All our products come with manufacturer warranties (typically 10–25 years). We also provide a workmanship warranty on every installation. Ask about specific coverage during your consultation.",
+    a: "All our products come with manufacturer warranties. We also provide a workmanship warranty on every installation. Ask about specific coverage during your consultation.",
   },
   {
     q: "Do you offer financing?",
-    a: "Yes. We offer $0-down financing options on qualifying projects over $3,000. Ask about our lending partners during your consultation.",
+    a: "Yes. We offer flexible payment options on qualifying projects. Ask about our payment plans during your consultation.",
   },
   {
-    q: "What window brands do you carry?",
-    a: "We work with all major brands including Andersen, Pella, Marvin, Milgard, and more. We'll recommend the best options based on your budget, style, and performance needs.",
+    q: "Can you match my existing decor?",
+    a: "Absolutely. We offer a huge range of colours, fabrics, and finishes across all product lines. Bring in a sample or photo and we'll find the perfect match.",
   },
 ];
 
@@ -206,7 +183,7 @@ function ServiceDetail({ service, index }: { service: (typeof SERVICES)[0]; inde
             </ul>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button variant="hero" size="lg" onClick={() => navigate("/#booking")} className="gap-2"><Calendar className="h-4 w-4" />Get a free estimate</Button>
+            <Button variant="hero" size="lg" onClick={() => navigate("/#booking")} className="gap-2"><Calendar className="h-4 w-4" />Get a free quote</Button>
             <Link to="/contact"><Button variant="outline" size="lg">Contact us</Button></Link>
           </div>
         </div>
@@ -221,9 +198,9 @@ export default function Services() {
   const [activeId, setActiveId] = useState(SERVICES[0].id);
 
   useEffect(() => {
-    document.title = "Window & Door Services | MonteKristo Windows & Doors";
+    document.title = "Our Services | Luxe Shutters";
     const meta = document.querySelector('meta[name="description"]');
-    const content = "Window installation, replacement, door installation, sliding doors, energy-efficient windows, custom doors, repairs, and commercial installations — serving the Phoenix metro area.";
+    const content = "Premium shutters, blinds, curtains, zipscreens, awnings, and security roller shutters — custom-made and professionally installed.";
     if (meta) { meta.setAttribute("content", content); } else { const tag = document.createElement("meta"); tag.name = "description"; tag.content = content; document.head.appendChild(tag); }
   }, []);
 
@@ -249,15 +226,15 @@ export default function Services() {
         <div className="container mx-auto px-4 lg:px-8 grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
           <div>
             <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-widest text-primary">Our Services</span>
-            <h1 className="font-serif text-3xl font-bold text-foreground sm:text-4xl md:text-5xl text-balance">Premium windows & doors, installed right.</h1>
-            <p className="mt-4 max-w-lg text-muted-foreground leading-relaxed">From window replacement and door installation to energy-efficient upgrades — we'll measure your home, recommend the right products, and install everything with certified precision.</p>
+            <h1 className="font-serif text-3xl font-bold text-foreground sm:text-4xl md:text-5xl text-balance">Premium shutters, blinds & curtains, installed right.</h1>
+            <p className="mt-4 max-w-lg text-muted-foreground leading-relaxed">From plantation shutters and zipscreens to curtains and security roller shutters — we'll measure your home, recommend the right products, and install everything with precision.</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button variant="hero" size="lg" onClick={() => navigate("/#booking")} className="gap-2"><Calendar className="h-4 w-4" />Get a free estimate</Button>
+              <Button variant="hero" size="lg" onClick={() => navigate("/#booking")} className="gap-2"><Calendar className="h-4 w-4" />Get a free quote</Button>
               <Link to="/pricing"><Button variant="outline" size="lg">View pricing</Button></Link>
             </div>
           </div>
           <div className="hidden lg:block">
-            <img src={windowsOffice} alt="MonteKristo Windows & Doors showroom" className="rounded-2xl shadow-card object-cover w-full aspect-[4/3]" />
+            <img src={serviceShutters} alt="Luxe Shutters showroom" className="rounded-2xl shadow-card object-cover w-full aspect-[4/3]" />
           </div>
         </div>
       </section>
@@ -294,7 +271,7 @@ export default function Services() {
 
       <section className="relative py-16 md:py-20 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={serviceWindowInstall} alt="" className="w-full h-full object-cover" />
+          <img src={serviceShutters} alt="" className="w-full h-full object-cover" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, hsl(210 20% 95% / 0.92), hsl(210 18% 97% / 0.94))' }} />
         </div>
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -314,10 +291,10 @@ export default function Services() {
 
       <section className="bg-primary/5 py-14 md:py-18 text-center">
         <div className="container mx-auto px-4 lg:px-8">
-          <h2 className="font-serif text-2xl font-bold text-foreground sm:text-3xl">Ready to upgrade your windows & doors?</h2>
-          <p className="mx-auto mt-3 max-w-md text-muted-foreground">Request a free consultation and we'll provide a detailed estimate before any work begins.</p>
+          <h2 className="font-serif text-2xl font-bold text-foreground sm:text-3xl">Ready to transform your home?</h2>
+          <p className="mx-auto mt-3 max-w-md text-muted-foreground">Request a free quote and we'll provide a detailed estimate before any work begins.</p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button variant="hero" size="lg" onClick={() => navigate("/#booking")} className="gap-2"><Calendar className="h-4 w-4" />Schedule consultation</Button>
+            <Button variant="hero" size="lg" onClick={() => navigate("/#booking")} className="gap-2"><Calendar className="h-4 w-4" />Get a free quote</Button>
             <Link to="/contact"><Button variant="outline" size="lg">Contact us</Button></Link>
           </div>
         </div>

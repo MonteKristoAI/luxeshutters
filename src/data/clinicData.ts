@@ -58,44 +58,34 @@ export const TEAM: TeamMember[] = [
 
 export const SERVICES = [
   {
-    title: "Window Installation",
-    description: "Professional installation of new windows — double-hung, casement, picture, bay, and specialty shapes — fitted precisely for comfort, insulation, and curb appeal.",
-    icon: "square",
+    title: "Shutters",
+    description: "Our shutters combine timeless elegance with exceptional craftsmanship, adding a touch of sophistication to any space.",
+    icon: "blinds",
   },
   {
-    title: "Window Replacement",
-    description: "Upgrade outdated, drafty, or damaged windows with modern energy-efficient units. We handle removal, fitting, insulation, and trim for a seamless finish.",
-    icon: "replace",
+    title: "Blinds",
+    description: "With their versatility and functionality, our blinds are the perfect blend of fashion and practicality.",
+    icon: "sliders-horizontal",
   },
   {
-    title: "Door Installation",
-    description: "Entry doors, interior doors, French doors, and patio doors — expertly installed with proper alignment, weatherstripping, and hardware for security and style.",
-    icon: "door-open",
+    title: "Curtains",
+    description: "From sheer elegance to opulent drapes, our curtains offer a wide range of options to suit your personal taste and interior decor.",
+    icon: "curtains",
   },
   {
-    title: "Sliding Doors",
-    description: "Smooth-gliding sliding glass doors that connect your living space to the outdoors — energy-efficient glass, durable tracks, and modern frames.",
-    icon: "move-horizontal",
+    title: "Zipscreens",
+    description: "Sleek design, smooth operation, and customizable options, our zip screens seamlessly blend into your existing architecture.",
+    icon: "monitor",
   },
   {
-    title: "Energy-Efficient Windows",
-    description: "Low-E glass, argon-filled panes, and insulated frames that reduce energy bills by up to 30%. ENERGY STAR® certified options available.",
-    icon: "zap",
+    title: "Awnings",
+    description: "Our awnings provide the perfect shade solution, protecting you from the scorching sun while adding a touch of elegance.",
+    icon: "umbrella",
   },
   {
-    title: "Custom Doors",
-    description: "Handcrafted and custom-sized doors in wood, fiberglass, and steel — designed to match your home's architecture and personal style.",
-    icon: "paintbrush",
-  },
-  {
-    title: "Repairs & Maintenance",
-    description: "Window seal repairs, glass replacement, hardware fixes, weatherstripping, and door realignment — keeping everything working like new.",
-    icon: "wrench",
-  },
-  {
-    title: "Commercial Installations",
-    description: "Storefront windows, commercial entry systems, and large-scale glazing projects — built to code with professional-grade materials.",
-    icon: "building",
+    title: "Security Roller Shutters",
+    description: "Designed to protect your windows and doors, our shutters offer a robust defense against intruders, while adding a layer of privacy and insulation.",
+    icon: "shield",
   },
 ];
 
