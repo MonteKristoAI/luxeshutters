@@ -39,13 +39,28 @@ const ConsultationForm = ({ showMap = true }: {showMap?: boolean;}) => {
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
-            <span className="text-sm font-medium tracking-widest uppercase mb-4 block" style={{ color: 'hsl(210 65% 65%)' }}>Get in Touch</span>
+            <span className="text-sm font-medium tracking-widest uppercase mb-4 block" style={{ color: 'hsl(210 65% 65%)' }}>Free Measure & Quote</span>
             <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-5 leading-tight" style={{ color: 'hsl(210 20% 95%)' }}>Your Dream Window Furnishings Are Just
               <br />One Call Away
             </h2>
-            <p className="text-base leading-relaxed mb-8 max-w-md" style={{ color: 'hsl(215 10% 60%)' }}>
-              Whether you're looking for shutters, blinds, curtains, or outdoor screens, our team is ready to help. Request a consultation and we'll be in touch to discuss your vision.
+            <p className="text-base leading-relaxed mb-4 max-w-md" style={{ color: 'hsl(215 10% 60%)' }}>
+              Luxe is dedicated to providing high quality, stylish, and fit for purpose solutions throughout your home. We supply and install a wide selection of plantation shutters, curtains, and blinds as well as outdoor zip screens, awnings, and security roller shutters.
             </p>
+            <p className="text-sm font-medium mb-2" style={{ color: 'hsl(210 20% 85%)' }}>Our team happily services:</p>
+            <p className="text-sm leading-relaxed mb-4" style={{ color: 'hsl(215 10% 60%)' }}>
+              Wagga · Junee · Coolamon · Temora · Cootamundra · Lake Cargelligo · Young · Grenfell · Griffith · Leeton · Forbes · West Wyalong · Condobolin and surrounding areas.
+            </p>
+            <p className="text-sm leading-relaxed mb-6" style={{ color: 'hsl(215 10% 60%)' }}>
+              Fill in the form and we will reach out to you within 24 hours.
+            </p>
+            <div className="flex flex-col gap-2 mb-6">
+              <a href="tel:1800465893" className="flex items-center gap-2 text-sm font-medium" style={{ color: 'hsl(210 20% 85%)' }}>
+                <Phone className="w-4 h-4" style={{ color: 'hsl(210 65% 65%)' }} /> 1800-465-893
+              </a>
+              <a href="mailto:admin@luxeshutters.com.au" className="flex items-center gap-2 text-sm font-medium" style={{ color: 'hsl(210 20% 85%)' }}>
+                <span className="w-4 h-4 inline-flex items-center justify-center" style={{ color: 'hsl(210 65% 65%)' }}>✉</span> admin@luxeshutters.com.au
+              </a>
+            </div>
             <ul className="space-y-4">
               {benefits.map((b) =>
               <li key={b.text} className="flex items-start gap-3">
