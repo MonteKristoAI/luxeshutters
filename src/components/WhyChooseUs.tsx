@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
           {[
           { value: "4.9 / 5", label: "Average customer rating" },
           { value: "10+ yrs", label: "Industry experience" },
-          { value: "5,000+", label: "Windows & shutters installed" }].
+          { value: "5,000+", label: "Products installed" }].
           map((stat) =>
           <div key={stat.label} className="bg-card p-10 text-center">
               <div className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-2">{stat.value}</div>

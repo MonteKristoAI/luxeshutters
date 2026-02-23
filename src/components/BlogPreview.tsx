@@ -26,7 +26,7 @@ export default function BlogPreview() {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-sm font-medium text-primary tracking-widest uppercase mb-3 block">From the blog</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground font-sans">Tips, guides and landscaping insights</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground font-sans">Tips, guides & window furnishing insights</h2>
         </div>
 
         <div className={`max-w-3xl mx-auto scroll-fade ${isVisible ? "visible" : ""}`}>
