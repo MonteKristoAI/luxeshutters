@@ -230,7 +230,7 @@ export default function Services() {
             <p className="mt-4 max-w-lg text-muted-foreground leading-relaxed">From plantation shutters and zipscreens to curtains and security roller shutters — we'll measure your home, recommend the right products, and install everything with precision.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button variant="hero" size="lg" onClick={() => navigate("/#booking")} className="gap-2"><Calendar className="h-4 w-4" />Get a free quote</Button>
-              <Link to="/pricing"><Button variant="outline" size="lg">View pricing</Button></Link>
+              
             </div>
           </div>
           <div className="hidden lg:block">
