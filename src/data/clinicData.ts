@@ -5,8 +5,8 @@ export const CLINIC = {
   phone: "1800-465-893",
   email: "admin@luxeshutters.com.au",
   hours: {
-    weekday: "Monday – Friday: 7:00am – 6:00pm",
-    saturday: "Saturday: 8:00am – 2:00pm",
+    weekday: "Monday – Friday: 9:00 am – 5:00 pm",
+    saturday: "Saturday: Closed",
     sunday: "Sunday: Closed",
   },
 };
