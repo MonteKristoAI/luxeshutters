@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Phone, Clock, Shield } from "lucide-react";
+import { Phone, Clock, Shield, Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -37,37 +37,49 @@ const ConsultationForm = ({ showMap = true }: {showMap?: boolean;}) => {
         ref={ref as React.RefObject<HTMLDivElement>}
         className={`container max-w-6xl scroll-fade ${isVisible ? "visible" : ""}`}>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div>
-            <span className="text-sm font-medium tracking-widest uppercase mb-4 block" style={{ color: 'hsl(210 65% 65%)' }}>Free Measure & Quote</span>
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-5 leading-tight" style={{ color: 'hsl(210 20% 95%)' }}>Your Dream Window Furnishings Are Just
-              <br />One Call Away
+            <span className="text-xs font-semibold tracking-[0.2em] uppercase mb-3 block" style={{ color: 'hsl(210 65% 65%)' }}>Free Measure & Quote</span>
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-4 leading-tight" style={{ color: 'hsl(210 20% 95%)' }}>
+              Your Dream Window<br />Furnishings Are Just<br />One Call Away
             </h2>
-            <p className="text-base leading-relaxed mb-4 max-w-md" style={{ color: 'hsl(215 10% 60%)' }}>
-              Luxe is dedicated to providing high quality, stylish, and fit for purpose solutions throughout your home. We supply and install a wide selection of plantation shutters, curtains, and blinds as well as outdoor zip screens, awnings, and security roller shutters.
+            <p className="text-[15px] leading-relaxed mb-6 max-w-lg" style={{ color: 'hsl(215 15% 55%)' }}>
+              Luxe is dedicated to providing high quality, stylish, and fit for purpose solutions throughout your home. We supply and install plantation shutters, curtains, blinds, outdoor zip screens, awnings, and security roller shutters.
             </p>
-            <p className="text-sm font-medium mb-2" style={{ color: 'hsl(210 20% 85%)' }}>Our team happily services:</p>
-            <p className="text-sm leading-relaxed mb-4" style={{ color: 'hsl(215 10% 60%)' }}>
-              Wagga · Junee · Coolamon · Temora · Cootamundra · Lake Cargelligo · Young · Grenfell · Griffith · Leeton · Forbes · West Wyalong · Condobolin and surrounding areas.
+
+            <div className="rounded-xl p-4 mb-6" style={{ background: 'hsl(215 20% 16%)' }}>
+              <p className="text-xs font-semibold tracking-wide uppercase mb-2" style={{ color: 'hsl(210 20% 75%)' }}>Service Areas</p>
+              <p className="text-sm leading-relaxed" style={{ color: 'hsl(215 15% 55%)' }}>
+                Wagga · Junee · Coolamon · Temora · Cootamundra · Lake Cargelligo · Young · Grenfell · Griffith · Leeton · Forbes · West Wyalong · Condobolin & surrounds
+              </p>
+            </div>
+
+            <p className="text-sm italic mb-6" style={{ color: 'hsl(215 15% 50%)' }}>
+              Fill in the form and we'll reach out within 24 hours.
             </p>
-            <p className="text-sm leading-relaxed mb-6" style={{ color: 'hsl(215 10% 60%)' }}>
-              Fill in the form and we will reach out to you within 24 hours.
-            </p>
-            <div className="flex flex-col gap-2 mb-6">
-              <a href="tel:1800465893" className="flex items-center gap-2 text-sm font-medium" style={{ color: 'hsl(210 20% 85%)' }}>
-                <Phone className="w-4 h-4" style={{ color: 'hsl(210 65% 65%)' }} /> 1800-465-893
+
+            <div className="flex flex-col sm:flex-row gap-4 mb-6 pb-6" style={{ borderBottom: '1px solid hsl(215 18% 22%)' }}>
+              <a href="tel:1800465893" className="flex items-center gap-2.5 text-sm font-medium hover:opacity-80 transition-opacity" style={{ color: 'hsl(210 20% 85%)' }}>
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg" style={{ background: 'hsl(210 65% 42% / 0.15)' }}>
+                  <Phone className="w-4 h-4" style={{ color: 'hsl(210 65% 65%)' }} />
+                </span>
+                1800-465-893
               </a>
-              <a href="mailto:admin@luxeshutters.com.au" className="flex items-center gap-2 text-sm font-medium" style={{ color: 'hsl(210 20% 85%)' }}>
-                <span className="w-4 h-4 inline-flex items-center justify-center" style={{ color: 'hsl(210 65% 65%)' }}>✉</span> admin@luxeshutters.com.au
+              <a href="mailto:admin@luxeshutters.com.au" className="flex items-center gap-2.5 text-sm font-medium hover:opacity-80 transition-opacity" style={{ color: 'hsl(210 20% 85%)' }}>
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg" style={{ background: 'hsl(210 65% 42% / 0.15)' }}>
+                  <Mail className="w-4 h-4" style={{ color: 'hsl(210 65% 65%)' }} />
+                </span>
+                admin@luxeshutters.com.au
               </a>
             </div>
-            <ul className="space-y-4">
+
+            <ul className="space-y-3">
               {benefits.map((b) =>
-              <li key={b.text} className="flex items-start gap-3">
-                  <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg" style={{ background: 'hsl(210 65% 42% / 0.15)' }}>
+              <li key={b.text} className="flex items-center gap-3">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg" style={{ background: 'hsl(210 65% 42% / 0.15)' }}>
                     <b.icon className="h-4 w-4" style={{ color: 'hsl(210 65% 65%)' }} />
                   </span>
-                  <span className="text-sm font-medium leading-snug pt-1" style={{ color: 'hsl(210 20% 85%)' }}>{b.text}</span>
+                  <span className="text-sm font-medium" style={{ color: 'hsl(210 20% 85%)' }}>{b.text}</span>
                 </li>
               )}
             </ul>
