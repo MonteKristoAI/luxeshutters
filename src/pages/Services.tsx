@@ -18,6 +18,7 @@ import {
   AccordionTrigger } from
 "@/components/ui/accordion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import FAQSection from "@/components/FAQSection";
 
 import serviceShutters from "@/assets/service-shutters.jpg";
 import serviceBlinds from "@/assets/service-blinds.jpg";
@@ -254,39 +255,7 @@ export default function Services() {
 
       {SERVICES.map((s, i) => <ServiceDetail key={s.id} service={s} index={i} />)}
 
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <FAQSection />
 
       <section className="bg-primary/5 py-14 md:py-18 text-center">
         <div className="container mx-auto px-4 lg:px-8">
