@@ -32,6 +32,8 @@ import galleryWork27 from "@/assets/gallery-work-27.jpg";
 import galleryWork28 from "@/assets/gallery-work-28.jpg";
 import galleryWork29 from "@/assets/gallery-work-29.jpg";
 import galleryWork30 from "@/assets/gallery-work-30.jpg";
+import galleryWork31 from "@/assets/gallery-work-31.jpg";
+import galleryWork32 from "@/assets/gallery-work-32.jpg";
 
 type Tab = "All" | "Zipscreens" | "Outdoor Blinds" | "Shutters" | "Installations";
 const images = [
@@ -65,6 +67,8 @@ const images = [
   { src: galleryWork28, alt: "Roller blinds in laundry room for privacy and light control", tab: "Outdoor Blinds" as const },
   { src: galleryWork29, alt: "Roman blind in bedroom with warm timber flooring", tab: "Outdoor Blinds" as const },
   { src: galleryWork30, alt: "Roller blind above kitchen sink with clean white finish", tab: "Outdoor Blinds" as const },
+  { src: galleryWork31, alt: "Zipscreens on dark brick home exterior providing sun protection", tab: "Zipscreens" as const },
+  { src: galleryWork32, alt: "Inside view of enclosed alfresco with zipscreens and outdoor dining", tab: "Zipscreens" as const },
 ];
 
 const tabs: Tab[] = ["All", "Zipscreens", "Outdoor Blinds", "Shutters", "Installations"];
