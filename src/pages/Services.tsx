@@ -29,51 +29,72 @@ import serviceRollerShutters from "@/assets/service-roller-shutters.jpg";
 const SERVICES = [
   {
     id: "shutters",
-    title: "Shutters",
+    title: "Premium Shutters",
     pill: "Shutters",
     image: serviceShutters,
-    summary: "Our shutters combine timeless elegance with exceptional craftsmanship, adding a touch of sophistication to any space.",
-    intro: "Transform your home with our premium plantation shutters. Available in a range of materials and finishes, our shutters offer superior light control, privacy, and insulation while adding a timeless aesthetic to any room.",
-    timeline: ["Free in-home consultation & measurement", "Material and style selection", "Custom manufacturing to your specs", "Professional installation", "Final adjustments and quality check", "Care and maintenance walkthrough"],
+    summary: "Our shutters combine timeless elegance with exceptional craftsmanship, adding beauty and functionality to any space.",
+    intro: "At Luxe Shutters, we take pride in offering top-quality shutters that not only elevate the aesthetics of your space but also provide practical benefits such as light control, privacy, and energy efficiency. Whether you're looking to transform your windows or create a stylish room divider, our premium shutters are the perfect solution.",
+    timeline: [
+      "Material & Finish — Wooden shutters create a cozy, organic ambiance with timeless elegance. Synthetic materials like vinyl offer enhanced durability and moisture resistance for bathrooms and kitchens.",
+      "Style & Design — Plantation shutters have wide louvers for a classic, elegant look with excellent light and privacy control. Contemporary designs with clean lines add a sleek, modern touch.",
+      "Budget Considerations — High-quality shutters may require a larger initial investment but offer superior durability and longevity. Custom finishes or unique designs can affect the price — we help you find the right balance.",
+    ],
     goodToKnow: ["Custom-made to fit any window shape or size", "Available in timber, PVC, and aluminium", "Increases property value and street appeal"],
   },
   {
     id: "blinds",
-    title: "Blinds",
+    title: "Roller Blinds",
     pill: "Blinds",
     image: serviceBlinds,
-    summary: "With their versatility and functionality, our blinds are the perfect blend of fashion and practicality.",
-    intro: "Our blinds come in a wide variety of styles — roller, venetian, vertical, and more — designed to suit every room and budget. With motorised options and a huge range of fabrics and colours, you'll find the perfect fit for your space.",
-    timeline: ["In-home consultation and window assessment", "Style and fabric selection", "Precise measurement", "Custom manufacturing", "Professional installation", "Operation walkthrough"],
-    goodToKnow: ["Motorised and smart-home compatible options", "Block-out and sunscreen fabrics available", "Child-safe designs as standard"],
+    summary: "Achieve privacy and light control with our wide selection of stylish and affordable blinds.",
+    intro: "Luxe is your trusted partner for premium, stylish, and purpose-driven window covering solutions. We specialize in a comprehensive range of blinds, including roller blinds, venetian blinds, and vertical blinds, designed to meet your unique preferences and needs. Our goal is to transform your living spaces with blinds that seamlessly combine elegance with superior light management.",
+    timeline: [
+      "Light Control — Adjust the amount of natural light entering a room. 3D Shades and Dual Shades let you control solid and transparent panels for lighting and privacy.",
+      "Privacy Control — Adjust visibility from outside. Dual Shades let you expose a view through transparent sections or close strips for complete privacy.",
+      "Durability — High-quality fabrics designed to withstand harsh Australian conditions, making them a long-lasting investment.",
+      "Energy Efficiency — Control natural light to regulate room temperature, reducing heating and cooling costs.",
+      "UV Protection — Innovative translucent fabric provides UV ray protection while still allowing natural light in.",
+    ],
+    goodToKnow: ["Short lead time of only 2–3 weeks", "Australian made to the highest standards", "12-month limited warranty included"],
   },
   {
     id: "curtains",
-    title: "Curtains",
+    title: "Blockout & Sheer Curtains",
     pill: "Curtains",
     image: serviceCurtains,
-    summary: "From sheer elegance to opulent drapes, our curtains offer a wide range of options to suit your personal taste and interior decor.",
-    intro: "Add warmth, texture, and style to your home with our premium curtain range. From sheer voiles to heavy block-out drapes, we offer an extensive collection of fabrics, colours, and heading styles to complement any interior.",
-    timeline: ["Design consultation", "Fabric selection and sampling", "Precise window measurement", "Custom tailoring and manufacturing", "Professional fitting and hanging", "Styling and final adjustments"],
-    goodToKnow: ["Huge range of fabrics and colours", "S-fold, pinch pleat, and eyelet heading styles", "Block-out and thermal lining options"],
+    summary: "Add elegance and comfort to your home with our luxurious and functional blockout and sheer curtains.",
+    intro: "Curtains are a classic and elegant window treatment option that can transform the look and feel of any room. They come in a range of styles, colours, and patterns to suit any interior design style.",
+    timeline: [
+      "Improved Sleep Quality — Blockout curtains block light and noise, creating a peaceful environment that promotes better sleep.",
+      "Protection from UV Rays — Block harmful UV rays from damaging your furniture, flooring, and belongings.",
+      "Enhanced Privacy & Security — An extra layer of privacy by blocking the view from outside your home.",
+      "Reduced Outside Noise — Thick blockout curtains absorb sound, creating a more peaceful home environment.",
+    ],
+    goodToKnow: ["Easy to clean — most can be machine-washed or dry-cleaned", "Wide range of fabrics, patterns, and colours for personalized style", "Cost-effective with increased home value"],
   },
   {
     id: "zipscreens",
     title: "Zipscreens",
     pill: "Zipscreens",
     image: serviceZipscreens,
-    summary: "Sleek design, smooth operation, and customizable options, our zip screens seamlessly blend into your existing architecture.",
-    intro: "Zipscreens are the modern solution for outdoor living areas. With a patented zip-guided system, they provide superior wind resistance, UV protection, and insect control while maintaining your view and airflow.",
-    timeline: ["Site assessment and consultation", "Product and colour selection", "Precise measurement of openings", "Custom manufacturing", "Professional installation", "Motor programming and testing"],
-    goodToKnow: ["Wind-rated for exposed areas", "UV protection up to 99%", "Motorised with remote or smart-home control"],
+    summary: "Create a comfortable and private outdoor area with our sleek and versatile zip guide screens.",
+    intro: "At Luxe Shutters, we take immense pride in being your premier destination for high-quality window solutions and innovative zipscreens. Our mission is simple yet profound: to provide you with the finest products that combine functionality and aesthetics seamlessly.",
+    timeline: [
+      "Privacy Control — Act as a barrier against prying eyes, allowing you to enjoy your outdoor space in peace.",
+      "Climate Control — A buffer against harsh weather, providing protection against wind, rain, and excessive sunlight year-round.",
+      "Energy Efficient — Regulate temperature in your outdoor space, reducing the need for air conditioning or heating.",
+      "Stylish Design — Available in a variety of colours, materials, and designs that integrate seamlessly into your architecture.",
+      "Versatility — Fully enclose your space, create partial enclosures, or roll up completely when not needed.",
+    ],
+    goodToKnow: ["Low maintenance and hassle-free", "Durable and long-lasting in harsh outdoor conditions", "Increases property value"],
   },
   {
     id: "awnings",
-    title: "Awnings",
+    title: "External Window Awnings",
     pill: "Awnings",
     image: serviceAwnings,
-    summary: "Our awnings provide the perfect shade solution, protecting you from the scorching sun while adding a touch of elegance.",
-    intro: "Extend your outdoor living with our range of retractable and fixed awnings. Designed to withstand harsh conditions, our awnings provide shade, reduce indoor temperatures, and add style to your home's exterior.",
+    summary: "Extend your living space and create an outdoor oasis with our range of stylish external window awnings.",
+    intro: "External window awnings are a great way to extend your living space and create an outdoor oasis. These window awnings come in a range of styles, from retractable to fixed, and can be customized to fit any outdoor space.",
     timeline: ["On-site consultation and measurement", "Style and fabric selection", "Engineering and structural assessment", "Custom manufacturing", "Professional installation", "Operation and care guide"],
     goodToKnow: ["Retractable and fixed options available", "Reduces indoor temperatures significantly", "Weather-resistant fabrics and frames"],
   },
@@ -82,7 +103,7 @@ const SERVICES = [
     title: "Security Roller Shutters",
     pill: "Security",
     image: serviceRollerShutters,
-    summary: "Designed to protect your windows and doors, our shutters offer a robust defense against intruders, while adding a layer of privacy and insulation.",
+    summary: "Designed to protect your windows and doors, our shutters offer a robust defense against intruders, while adding privacy and insulation.",
     intro: "Our security roller shutters provide peace of mind with robust protection against break-ins, storms, and extreme weather. They also offer excellent insulation, noise reduction, and complete light block-out when closed.",
     timeline: ["Security assessment and consultation", "Product and colour selection", "Precise measurement", "Custom manufacturing", "Professional installation", "Motor setup and security testing"],
     goodToKnow: ["Insurance-approved security solution", "Excellent noise and thermal insulation", "Motorised with key-switch or remote control"],
@@ -164,7 +185,7 @@ function ServiceDetail({ service, index }: { service: (typeof SERVICES)[0]; inde
           <h2 className="font-serif text-2xl font-bold text-foreground sm:text-3xl">{service.title}</h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">{service.intro}</p>
           <div className="mt-8">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">What to expect</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">Key details</h3>
             <ol className="space-y-3">
               {service.timeline.map((step, i) => (
                 <li key={i} className="flex items-start gap-3">
@@ -257,7 +278,7 @@ export default function Services() {
 
       <section className="bg-secondary/40 py-14 md:py-18">
         <div className="container mx-auto px-4 lg:px-8 text-center">
-          <h2 className="font-serif text-2xl font-bold text-foreground sm:text-3xl">Quality craftsmanship. Transparent pricing. No surprises.</h2>
+          <h2 className="font-serif text-2xl font-bold text-foreground sm:text-3xl">Quality craftsmanship. No surprises.</h2>
           <div className="mt-10 grid grid-cols-2 gap-6 sm:gap-8 lg:grid-cols-4">
             {TRUST_POINTS.map((tp, i) => (
               <div key={i} className="flex flex-col items-center gap-3">
