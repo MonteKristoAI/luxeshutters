@@ -31,6 +31,16 @@ export default function Header() {
 
   useEffect(() => { setMobileOpen(false); }, [location]);
 
+  // Handle hash scrolling after navigation
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }, [location]);
+
   const handleNavClick = (item: (typeof NAV_ITEMS)[0]) => {
     if (item.anchor) {
       if (location.pathname === "/") {
