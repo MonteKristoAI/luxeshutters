@@ -18,9 +18,14 @@ const Index = () => {
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.replace("#", "");
+      // Longer delay to allow images/layout to settle before scrolling
       setTimeout(() => {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
+      }, 500);
+      // Second scroll to correct for any late layout shifts
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 1200);
     } else {
       window.scrollTo(0, 0);
     }
