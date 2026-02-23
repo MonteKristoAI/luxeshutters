@@ -3,7 +3,7 @@ export const CLINIC = {
   slogan: "Where Style Meets Everyday Comfort.",
   address: "Temora, New South Wales 2666, Australia",
   phone: "1800-465-893",
-  email: "hello@luxeshutters.com",
+  email: "admin@luxeshutters.com.au",
   hours: {
     weekday: "Monday – Friday: 7:00am – 6:00pm",
     saturday: "Saturday: 8:00am – 2:00pm",
