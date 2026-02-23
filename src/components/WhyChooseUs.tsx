@@ -1,12 +1,15 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import whyChooseBg from "@/assets/why-choose-landscaping.jpg";
+import whyChooseBg from "@/assets/why-choose-windows.jpg";
 
-const values = [
-{ number: "01", title: "Outdoor aesthetics expertise", body: "Every landscaping project starts with a detailed site evaluation. We analyze your property, soil, sunlight, and goals to design an outdoor space that's both beautiful and functional." },
-{ number: "02", title: "Certified professionals", body: "Our team includes certified landscape professionals, licensed contractors, and trained horticulturists who take pride in precision. Every plant, stone, and feature is placed with care." },
-{ number: "03", title: "Licensed & insured", body: "We're fully licensed landscaping contractors with comprehensive liability and workers' comp coverage. Your home and investment are protected." },
-{ number: "04", title: "Transparent pricing", body: "You'll know exactly what your project costs before we start. No surprises, no hidden fees — just clear communication and honest estimates." },
-{ number: "05", title: "Long-term reliability", body: "Quality materials, expert craftsmanship, and a final walkthrough you'll love. We use premium plants, pavers, and materials and stand behind every project we complete." }];
+const steps = [
+  { number: "01", title: "Get in Touch With Us", body: "Request a Free Quote, Book a discovery call or Upload your plans. We will then organize a time to visit your home for a Free Measure & Quote consultation." },
+  { number: "02", title: "Mobile Showroom", body: "Our consultants will come to your home and discuss your needs for each window. We bring our Mobile Showroom so you can see and feel the quality of the products we offer, right in your own home." },
+  { number: "03", title: "Fast Quote & Follow Up", body: "You will receive a quote in 48 hours. Our team will follow up with you to answer any questions and make sure you're completely happy before moving forward." },
+  { number: "04", title: "Swift Order Processing & Transparent Lead Times", body: "As soon as the quote has been accepted and the 50% deposit is paid, we place your order immediately. We keep you informed with clear lead times so you always know what to expect." },
+  { number: "05", title: "Preparation for a Smooth Installation Experience", body: "A couple of weeks prior to your install, we'll be in touch to confirm dates, access requirements, and any final details to ensure everything runs seamlessly on the day." },
+  { number: "06", title: "Installation Day", body: "The Big Day Arrives! Installation time varies depending on the scope of work. Our professional installers treat your home with care and ensure a flawless finish." },
+  { number: "07", title: "Post Install Support for your New Products", body: "Once the installation is finished, we walk you through your new products, answer any questions, and make sure you're 100% satisfied. We're always just a call away for ongoing support." },
+];
 
 
 export default function WhyChooseUs() {
@@ -21,17 +24,17 @@ export default function WhyChooseUs() {
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none" />
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl mb-20">
-          <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-4">Why MonteKristo Landscaping</p>
+          <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-4">Our Process</p>
           <h2 className="font-serif text-4xl md:text-5xl font-semibold text-foreground leading-[1.15] mb-6">
-            Built on expertise,<br className="hidden md:block" /> not shortcuts.
+            How Does it Work?
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-            We started MonteKristo Landscaping because we believed outdoor spaces could be more beautiful, more functional, and a whole lot more professionally maintained.
+            Here at Luxe Shutters, we pride ourselves on being a service based company who supplies and installs the highest quality window furnishings and outdoor screens. We help our clients with a simple, step by step process that removes all stress and offers transparency and communication along the way.
           </p>
         </div>
 
         <div className={`border-t border-border scroll-fade ${isVisible ? "visible" : ""}`}>
-          {values.map((item) =>
+          {steps.map((item) =>
           <div key={item.number} className="grid grid-cols-1 md:grid-cols-[4rem_1fr_1.5fr] gap-4 md:gap-8 py-8 md:py-10 border-b border-border items-start">
               <span className="font-serif text-3xl md:text-4xl font-semibold text-foreground/15">{item.number}</span>
               <h3 className="text-xl md:text-2xl font-medium text-foreground font-sans">{item.title}</h3>
@@ -43,8 +46,8 @@ export default function WhyChooseUs() {
         <div className={`mt-16 grid grid-cols-1 sm:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden scroll-fade ${isVisible ? "visible" : ""}`}>
           {[
           { value: "4.9 / 5", label: "Average customer rating" },
-          { value: "15+ yrs", label: "Landscaping experience" },
-          { value: "2,000+", label: "Projects completed" }].
+          { value: "10+ yrs", label: "Industry experience" },
+          { value: "5,000+", label: "Windows & shutters installed" }].
           map((stat) =>
           <div key={stat.label} className="bg-card p-10 text-center">
               <div className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-2">{stat.value}</div>
