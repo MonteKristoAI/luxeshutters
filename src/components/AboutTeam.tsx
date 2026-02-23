@@ -37,7 +37,7 @@ export default function AboutTeam() {
         {/* Founder 2 — Chris & Amber: text left, photo right */}
         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 scroll-fade-right ${isVisible ? "visible" : ""}`} style={{ transitionDelay: "0.15s" }}>
           <div className="lg:order-2 overflow-hidden rounded-2xl shadow-elevated">
-            <img src={foundersChris} alt="Chris & Amber Hanlon" className="w-full h-[650px] lg:h-[750px] object-cover object-[center_20%]" />
+            <img src={foundersChris} alt="Chris & Amber Hanlon" className="w-full h-[650px] lg:h-[750px] object-cover object-[center_45%]" />
           </div>
           <div className="lg:order-1">
             <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-2">Chris & Amber Hanlon</h3>
