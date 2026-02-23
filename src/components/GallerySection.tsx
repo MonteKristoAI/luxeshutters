@@ -22,9 +22,18 @@ import galleryWork17 from "@/assets/gallery-work-17.jpg";
 import galleryWork18 from "@/assets/gallery-work-18.jpg";
 import galleryWork19 from "@/assets/gallery-work-19.jpg";
 import galleryWork20 from "@/assets/gallery-work-20.jpg";
+import galleryWork21 from "@/assets/gallery-work-21.jpg";
+import galleryWork22 from "@/assets/gallery-work-22.jpg";
+import galleryWork23 from "@/assets/gallery-work-23.jpg";
+import galleryWork24 from "@/assets/gallery-work-24.jpg";
+import galleryWork25 from "@/assets/gallery-work-25.jpg";
+import galleryWork26 from "@/assets/gallery-work-26.jpg";
+import galleryWork27 from "@/assets/gallery-work-27.jpg";
+import galleryWork28 from "@/assets/gallery-work-28.jpg";
+import galleryWork29 from "@/assets/gallery-work-29.jpg";
+import galleryWork30 from "@/assets/gallery-work-30.jpg";
 
-type Tab = "All" | "Zipscreens" | "Outdoor Blinds" | "Installations";
-
+type Tab = "All" | "Zipscreens" | "Outdoor Blinds" | "Shutters" | "Installations";
 const images = [
   { src: galleryWork1, alt: "Modern home with full-width zipscreens at dusk", tab: "Zipscreens" as const },
   { src: galleryWork2, alt: "Contemporary house with zipscreen installation and outdoor area", tab: "Zipscreens" as const },
@@ -46,9 +55,19 @@ const images = [
   { src: galleryWork18, alt: "Grey outdoor blinds protecting a carport area", tab: "Outdoor Blinds" as const },
   { src: galleryWork19, alt: "Interior view of enclosed deck area with blinds", tab: "Installations" as const },
   { src: galleryWork20, alt: "Cozy outdoor living space protected by zipscreens", tab: "Zipscreens" as const },
+  { src: galleryWork21, alt: "White plantation shutters in modern bathroom with subway tiles", tab: "Shutters" as const },
+  { src: galleryWork22, alt: "Plantation shutters in hallway with decorative tiled floor", tab: "Shutters" as const },
+  { src: galleryWork23, alt: "Wide plantation shutters in living room with timber floors", tab: "Shutters" as const },
+  { src: galleryWork24, alt: "White shutters in dining room with rustic timber table", tab: "Shutters" as const },
+  { src: galleryWork25, alt: "Plantation shutters in bedroom with garden views", tab: "Shutters" as const },
+  { src: galleryWork26, alt: "Triple window shutters in cozy bedroom setting", tab: "Shutters" as const },
+  { src: galleryWork27, alt: "Large format outdoor zipscreens on brick home exterior", tab: "Zipscreens" as const },
+  { src: galleryWork28, alt: "Roller blinds in laundry room for privacy and light control", tab: "Outdoor Blinds" as const },
+  { src: galleryWork29, alt: "Roman blind in bedroom with warm timber flooring", tab: "Outdoor Blinds" as const },
+  { src: galleryWork30, alt: "Roller blind above kitchen sink with clean white finish", tab: "Outdoor Blinds" as const },
 ];
 
-const tabs: Tab[] = ["All", "Zipscreens", "Outdoor Blinds", "Installations"];
+const tabs: Tab[] = ["All", "Zipscreens", "Outdoor Blinds", "Shutters", "Installations"];
 
 export default function GallerySection() {
   const [activeTab, setActiveTab] = useState<Tab>("All");
