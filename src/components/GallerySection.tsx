@@ -2,37 +2,33 @@ import { useState } from "react";
 import { X } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-import serviceLawnCare from "@/assets/service-lawn-care.jpg";
-import serviceGardenDesign from "@/assets/service-garden-design.jpg";
-import servicePlanting from "@/assets/service-planting.jpg";
-import serviceIrrigation from "@/assets/service-irrigation.jpg";
-import galleryLandscapingDetail from "@/assets/gallery-landscaping-detail.jpg";
-import galleryLandscapingTeam from "@/assets/gallery-landscaping-team.jpg";
-import galleryLandscapingFinished from "@/assets/gallery-landscaping-finished.jpg";
-import galleryLandscapingConstruction from "@/assets/gallery-landscaping-construction.jpg";
-import galleryLandscapingBeforeAfter from "@/assets/gallery-landscaping-before-after.jpg";
-import serviceOutdoorTransformation from "@/assets/service-outdoor-transformation.jpg";
-import landscapingOffice from "@/assets/landscaping-office.jpg";
-import serviceLandscapingConsultation from "@/assets/service-landscaping-consultation.jpg";
+import galleryWork1 from "@/assets/gallery-work-1.jpg";
+import galleryWork2 from "@/assets/gallery-work-2.jpg";
+import galleryWork3 from "@/assets/gallery-work-3.jpg";
+import galleryWork4 from "@/assets/gallery-work-4.jpg";
+import galleryWork5 from "@/assets/gallery-work-5.jpg";
+import galleryWork6 from "@/assets/gallery-work-6.jpg";
+import galleryWork7 from "@/assets/gallery-work-7.jpg";
+import galleryWork8 from "@/assets/gallery-work-8.jpg";
+import galleryWork9 from "@/assets/gallery-work-9.jpg";
+import galleryWork10 from "@/assets/gallery-work-10.jpg";
 
-type Tab = "All" | "Completed Projects" | "In Progress" | "Before & After" | "Team";
+type Tab = "All" | "Zipscreens" | "Outdoor Blinds" | "Installations";
 
 const images = [
-{ src: galleryLandscapingFinished, alt: "Completed backyard landscaping with patio and gardens", tab: "Completed Projects" as const },
-{ src: galleryLandscapingBeforeAfter, alt: "Before and after yard transformation", tab: "Before & After" as const },
-{ src: galleryLandscapingConstruction, alt: "Landscaping project in progress", tab: "In Progress" as const },
-{ src: galleryLandscapingTeam, alt: "Our landscaping crew at work", tab: "Team" as const },
-{ src: serviceGardenDesign, alt: "Custom garden design with flower beds", tab: "Completed Projects" as const },
-{ src: serviceLawnCare, alt: "Perfectly manicured residential lawn", tab: "Completed Projects" as const },
-{ src: galleryLandscapingDetail, alt: "Close-up of stone retaining wall craftsmanship", tab: "In Progress" as const },
-{ src: landscapingOffice, alt: "MonteKristo Landscaping office and design studio", tab: "Team" as const },
-{ src: serviceOutdoorTransformation, alt: "Outdoor living space with fire pit and patio", tab: "Completed Projects" as const },
-{ src: serviceLandscapingConsultation, alt: "Landscaper consulting with homeowner", tab: "Before & After" as const },
-{ src: servicePlanting, alt: "Professional planting in garden beds", tab: "In Progress" as const },
-{ src: serviceIrrigation, alt: "Irrigation system watering a lush lawn", tab: "Completed Projects" as const }];
+  { src: galleryWork1, alt: "Modern home with full-width zipscreens at dusk", tab: "Zipscreens" as const },
+  { src: galleryWork2, alt: "Contemporary house with zipscreen installation and outdoor area", tab: "Zipscreens" as const },
+  { src: galleryWork3, alt: "Verandah zipscreens on traditional weatherboard home", tab: "Outdoor Blinds" as const },
+  { src: galleryWork4, alt: "Outdoor entertaining area with zipscreens and timber posts", tab: "Zipscreens" as const },
+  { src: galleryWork5, alt: "Gable-roof outdoor area with zipscreen blinds", tab: "Zipscreens" as const },
+  { src: galleryWork6, alt: "Deck zipscreen providing shade and privacy", tab: "Outdoor Blinds" as const },
+  { src: galleryWork7, alt: "Pergola with outdoor blind installation on timber deck", tab: "Outdoor Blinds" as const },
+  { src: galleryWork8, alt: "See-through mesh zipscreen on covered patio", tab: "Installations" as const },
+  { src: galleryWork9, alt: "Side view of zipscreen guide rail detail", tab: "Installations" as const },
+  { src: galleryWork10, alt: "Large format zipscreens on brick home exterior", tab: "Installations" as const },
+];
 
-
-const tabs: Tab[] = ["All", "Completed Projects", "In Progress", "Before & After", "Team"];
+const tabs: Tab[] = ["All", "Zipscreens", "Outdoor Blinds", "Installations"];
 
 export default function GallerySection() {
   const [activeTab, setActiveTab] = useState<Tab>("All");
@@ -46,8 +42,8 @@ export default function GallerySection() {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="font-medium text-primary tracking-widest uppercase mb-3 block font-sans text-3xl">Our work</span>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">See our landscaping projects</h2>
-          <p className="text-muted-foreground leading-relaxed">From lawn transformations to complete outdoor living spaces — take a look at the projects we're proud of.</p>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">See our completed projects</h2>
+          <p className="text-muted-foreground leading-relaxed">From zipscreens to outdoor blinds — take a look at the installations we're proud of.</p>
         </div>
 
         <div className="flex justify-center gap-2 mb-10 flex-wrap">
@@ -74,5 +70,4 @@ export default function GallerySection() {
         </div>
       }
     </section>);
-
 }
