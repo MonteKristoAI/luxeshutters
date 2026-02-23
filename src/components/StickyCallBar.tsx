@@ -19,7 +19,7 @@ export default function StickyCallBar() {
         </div>
         <div className="flex items-center gap-4">
           <span className="text-xs text-primary-foreground/50 hidden xl:inline">
-            Serving Phoenix Metro
+            Serving Regional NSW
           </span>
           <Button asChild size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90 h-8 text-xs font-semibold">
             <a href={phoneHref}>Call Now</a>

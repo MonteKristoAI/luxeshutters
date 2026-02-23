@@ -1,7 +1,7 @@
 export const CLINIC = {
   name: "Luxe Shutters",
   slogan: "Where Style Meets Everyday Comfort.",
-  address: "4720 Sunset Blvd, Suite 200, Scottsdale, AZ 85251",
+  address: "Temora, New South Wales 2666, Australia",
   phone: "1800-465-893",
   email: "hello@luxeshutters.com",
   hours: {
