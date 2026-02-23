@@ -9,7 +9,7 @@ import galleryWork1 from "@/assets/gallery-work-1.jpg";
 import galleryWork20 from "@/assets/gallery-work-20.jpg";
 import galleryWork25 from "@/assets/gallery-work-25.jpg";
 import galleryWork29 from "@/assets/gallery-work-29.jpg";
-import blogBg from "@/assets/why-choose-landscaping.jpg";
+import blogBg from "@/assets/hero-shutters.png";
 
 const imageMap: Record<string, string> = {
   "blog-1": galleryWork23,
