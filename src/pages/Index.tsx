@@ -11,6 +11,7 @@ import BookingSection from "@/components/BookingSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import BlogPreview from "@/components/BlogPreview";
 import ConsultationForm from "@/components/ConsultationForm";
+import FAQSection from "@/components/FAQSection";
 
 const Index = () => {
   const location = useLocation();
@@ -43,6 +44,7 @@ const Index = () => {
         <BookingSection />
         <div className="section-shadow-top"><ReviewsSection /></div>
         <BlogPreview />
+        <FAQSection />
         <ConsultationForm showMap={false} />
       </main>
       <Footer />
