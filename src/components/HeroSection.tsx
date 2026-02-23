@@ -1,6 +1,6 @@
 import { ShieldCheck, Award, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-windows.jpg";
+import heroImage from "@/assets/hero-shutters.png";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const trustChips = [
@@ -34,18 +34,21 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Modern home with beautiful energy-efficient windows letting in natural light"
+          alt="Luxurious living room with premium plantation shutters"
           className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#1a1f2e]/85 via-[#1a1f2e]/55 to-transparent" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10 py-32 lg:py-40">
         <div className="max-w-2xl">
+          <p className="text-sm md:text-base uppercase tracking-[0.2em] text-white/60 mb-4 font-medium">
+            Where Style Meets Everyday Comfort.
+          </p>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
-            Better comfort. Better insulation. Better living.
+            Creating LIVING spaces people LOVE
           </h1>
           <p className="text-lg md:text-xl text-white/75 mb-8 leading-relaxed">
-            Premium windows and doors that transform your home — more natural light, lower energy bills, and modern curb appeal you'll love.
+            Luxe Shutters brings style and comfort to your home with premium shutters, blinds, and curtains designed for living spaces you'll truly enjoy.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -53,14 +56,14 @@ export default function HeroSection() {
               size="xl"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium shadow-lg"
               onClick={scrollToBooking}>
-              Request a free consultation
+              Get a Free Quote
             </Button>
             <Button
               variant="outline"
               size="xl"
               className="border-white/30 text-white bg-transparent hover:bg-white/10 backdrop-blur-sm"
               onClick={scrollToGallery}>
-              View our work
+              Call Us
             </Button>
           </div>
 
