@@ -272,7 +272,7 @@ export default function Services() {
       <section className="relative py-16 md:py-20 overflow-hidden">
         <div className="absolute inset-0">
           <img src={serviceShutters} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, hsl(210 20% 95% / 0.92), hsl(210 18% 97% / 0.94))' }} />
+          
         </div>
         
 
