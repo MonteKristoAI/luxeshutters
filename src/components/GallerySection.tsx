@@ -12,6 +12,16 @@ import galleryWork7 from "@/assets/gallery-work-7.jpg";
 import galleryWork8 from "@/assets/gallery-work-8.jpg";
 import galleryWork9 from "@/assets/gallery-work-9.jpg";
 import galleryWork10 from "@/assets/gallery-work-10.jpg";
+import galleryWork11 from "@/assets/gallery-work-11.jpg";
+import galleryWork12 from "@/assets/gallery-work-12.jpg";
+import galleryWork13 from "@/assets/gallery-work-13.jpg";
+import galleryWork14 from "@/assets/gallery-work-14.jpg";
+import galleryWork15 from "@/assets/gallery-work-15.jpg";
+import galleryWork16 from "@/assets/gallery-work-16.jpg";
+import galleryWork17 from "@/assets/gallery-work-17.jpg";
+import galleryWork18 from "@/assets/gallery-work-18.jpg";
+import galleryWork19 from "@/assets/gallery-work-19.jpg";
+import galleryWork20 from "@/assets/gallery-work-20.jpg";
 
 type Tab = "All" | "Zipscreens" | "Outdoor Blinds" | "Installations";
 
@@ -26,6 +36,16 @@ const images = [
   { src: galleryWork8, alt: "See-through mesh zipscreen on covered patio", tab: "Installations" as const },
   { src: galleryWork9, alt: "Side view of zipscreen guide rail detail", tab: "Installations" as const },
   { src: galleryWork10, alt: "Large format zipscreens on brick home exterior", tab: "Installations" as const },
+  { src: galleryWork11, alt: "Black zipscreen installation on brick house patio", tab: "Zipscreens" as const },
+  { src: galleryWork12, alt: "View from inside a patio with zipscreens lowered", tab: "Installations" as const },
+  { src: galleryWork13, alt: "Wide span zipscreens on modern white patio structure", tab: "Zipscreens" as const },
+  { src: galleryWork14, alt: "Full backyard view showing integrated zipscreen system", tab: "Outdoor Blinds" as const },
+  { src: galleryWork15, alt: "Side angle of zipscreen installation showing sleek profile", tab: "Installations" as const },
+  { src: galleryWork16, alt: "Side view of long patio enclosure with grey blinds", tab: "Outdoor Blinds" as const },
+  { src: galleryWork17, alt: "Complete patio enclosure with multiple grey blinds", tab: "Zipscreens" as const },
+  { src: galleryWork18, alt: "Grey outdoor blinds protecting a carport area", tab: "Outdoor Blinds" as const },
+  { src: galleryWork19, alt: "Interior view of enclosed deck area with blinds", tab: "Installations" as const },
+  { src: galleryWork20, alt: "Cozy outdoor living space protected by zipscreens", tab: "Zipscreens" as const },
 ];
 
 const tabs: Tab[] = ["All", "Zipscreens", "Outdoor Blinds", "Installations"];
