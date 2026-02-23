@@ -47,7 +47,7 @@ export default function Footer() {
                 <div><p>{CLINIC.hours.weekday}</p><p>{CLINIC.hours.saturday}</p><p>{CLINIC.hours.sunday}</p></div>
               </li>
             </ul>
-            <p className="text-xs text-primary-foreground/40 mt-4">Serving Scottsdale, Phoenix, Tempe, Mesa, Chandler, Gilbert, Paradise Valley, Peoria, and surrounding areas.</p>
+            <p className="text-xs text-primary-foreground/40 mt-4">Serving Temora, Wagga Wagga, Young, West Wyalong, Cootamundra, and surrounding areas across regional NSW.</p>
           </div>
         </div>
 

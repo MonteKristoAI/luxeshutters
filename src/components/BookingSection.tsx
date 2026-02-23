@@ -105,7 +105,7 @@ export default function BookingSection() {
                 <h3 className="font-serif text-xl font-semibold mb-4">Your location</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                   <div className="sm:col-span-2"><label className="text-sm text-muted-foreground mb-1 block">Street address *</label><Input value={form.address} onChange={(e) => setForm({ ...form, address: e.target.value })} placeholder="123 Desert View Dr" /></div>
-                  <div className="sm:col-span-2"><label className="text-sm text-muted-foreground mb-1 block">City *</label><Input value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} placeholder="Scottsdale" /></div>
+                  <div className="sm:col-span-2"><label className="text-sm text-muted-foreground mb-1 block">City *</label><Input value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} placeholder="Temora" /></div>
                 </div>
                 {form.address && form.city && <Button variant="hero" className="w-full" onClick={nextStep}>Continue</Button>}
               </div>
@@ -152,13 +152,13 @@ export default function BookingSection() {
               </div>
               <div className="border-t border-border pt-5">
                 <h4 className="font-serif font-semibold text-foreground mb-3 text-sm">Service area</h4>
-                <p className="text-sm text-muted-foreground mb-2">Phoenix metro & surrounding areas:</p>
+                <p className="text-sm text-muted-foreground mb-2">Regional NSW & surrounding areas:</p>
                 <div className="flex flex-wrap gap-1.5">
-                  {["Scottsdale", "Phoenix", "Tempe", "Mesa", "Chandler", "Gilbert", "Peoria", "Paradise Valley"].map((city) =>
+                  {["Temora", "Wagga Wagga", "Young", "West Wyalong", "Cootamundra", "Junee", "Griffith", "Cowra"].map((city) =>
                   <span key={city} className="text-xs bg-muted px-2 py-1 rounded-full text-muted-foreground">{city}</span>
                   )}
                 </div>
-                <p className="text-xs text-muted-foreground mt-2">+ 40-mile radius from Scottsdale</p>
+                <p className="text-xs text-muted-foreground mt-2">+ surrounding areas across regional NSW</p>
               </div>
             </div>
           </div>
