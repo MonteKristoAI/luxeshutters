@@ -47,6 +47,14 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Luxe Shutters | Premium Shutters, Blinds & Curtains — Temora NSW"
+        description="Premium shutters, blinds, curtains, zipscreens, and awnings — custom-made and professionally installed in Temora & the Riverina. Free in-home consultation."
+        canonical="/"
+      />
+      <StructuredData data={LOCAL_BUSINESS_DATA} id="ld-local-business" />
+      <StructuredData data={buildFAQData(HOME_FAQS)} id="ld-faq" />
+      <StructuredData data={buildBreadcrumbData([{ name: "Home", url: "https://luxeshutters.lovable.app/" }])} id="ld-breadcrumb" />
       <Header />
       <main>
         <HeroSection />

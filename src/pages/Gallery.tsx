@@ -16,6 +16,12 @@ export default function Gallery() {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Gallery | Luxe Shutters — Our Work & Installations"
+        description="Browse our portfolio of shutters, blinds, curtains, zipscreens, and awning installations across Temora and the Riverina region."
+        canonical="/gallery"
+      />
+      <StructuredData data={buildBreadcrumbData([{ name: "Home", url: "https://luxeshutters.lovable.app/" }, { name: "Gallery", url: "https://luxeshutters.lovable.app/gallery" }])} id="ld-breadcrumb" />
       <Header />
       <main className="pt-24 lg:pt-32">
         <section ref={ref} className="relative py-20 lg:py-28 overflow-hidden bg-background">

@@ -215,6 +215,12 @@ export default function Services() {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Our Services | Luxe Shutters — Shutters, Blinds, Curtains & More"
+        description="Premium shutters, blinds, curtains, zipscreens, awnings, and security roller shutters — custom-made and professionally installed in Temora & the Riverina."
+        canonical="/services"
+      />
+      <StructuredData data={buildBreadcrumbData([{ name: "Home", url: "https://luxeshutters.lovable.app/" }, { name: "Services", url: "https://luxeshutters.lovable.app/services" }])} id="ld-breadcrumb" />
       <Header />
 
       <section className="bg-secondary/50 pt-32 pb-14 md:pt-36 md:pb-20">

@@ -35,6 +35,12 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Blog | Luxe Shutters — Tips, Guides & Window Furnishing Insights"
+        description="Practical advice on shutters, blinds, curtains and more from our team — no jargon, just clear answers to questions homeowners actually ask."
+        canonical="/blog"
+      />
+      <StructuredData data={buildBreadcrumbData([{ name: "Home", url: "https://luxeshutters.lovable.app/" }, { name: "Blog", url: "https://luxeshutters.lovable.app/blog" }])} id="ld-breadcrumb" />
       <Header />
       <main>
         <section className="pt-32 pb-16 bg-secondary/50">
