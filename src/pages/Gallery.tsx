@@ -2,6 +2,8 @@ import { useState } from "react";
 import { X } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import StructuredData, { buildBreadcrumbData } from "@/components/StructuredData";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { galleryImages, galleryTabs, type GalleryTab } from "@/data/galleryData";
 
