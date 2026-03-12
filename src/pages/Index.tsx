@@ -13,7 +13,7 @@ import BlogPreview from "@/components/BlogPreview";
 import ConsultationForm from "@/components/ConsultationForm";
 import FAQSection from "@/components/FAQSection";
 import SEOHead from "@/components/SEOHead";
-import StructuredData, { LOCAL_BUSINESS_DATA, buildFAQData, buildBreadcrumbData } from "@/components/StructuredData";
+import StructuredData, { LOCAL_BUSINESS_DATA, ORGANIZATION_DATA, buildFAQData, buildBreadcrumbData } from "@/components/StructuredData";
 
 const HOME_FAQS = [
   { q: "How long does installation take?", a: "Most standard installations take 1–3 hours per window. Larger projects like whole-home shutters or zipscreens may take 1–2 days." },
