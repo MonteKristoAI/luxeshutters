@@ -53,6 +53,7 @@ const Index = () => {
         canonical="/"
       />
       <StructuredData data={LOCAL_BUSINESS_DATA} id="ld-local-business" />
+      <StructuredData data={ORGANIZATION_DATA} id="ld-organization" />
       <StructuredData data={buildFAQData(HOME_FAQS)} id="ld-faq" />
       <StructuredData data={buildBreadcrumbData([{ name: "Home", url: "https://luxeshutters.lovable.app/" }])} id="ld-breadcrumb" />
       <Header />
