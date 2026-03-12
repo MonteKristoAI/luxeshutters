@@ -4,6 +4,8 @@ import { Input } from "@/components/ui/input";
 import { BLOG_POSTS } from "@/data/clinicData";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import StructuredData, { buildBreadcrumbData } from "@/components/StructuredData";
 
 import galleryWork23 from "@/assets/gallery-work-23.jpg";
 import galleryWork25 from "@/assets/gallery-work-25.jpg";
