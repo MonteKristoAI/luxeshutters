@@ -21,6 +21,22 @@ export default function StructuredData({ data, id = "structured-data" }: Structu
   return null;
 }
 
+export const ORGANIZATION_DATA = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Luxe Shutters",
+  url: "https://luxeshutters.lovable.app",
+  logo: "https://luxeshutters.lovable.app/logo-widget.png",
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "1800-465-893",
+    contactType: "customer service",
+    areaServed: "AU",
+    availableLanguage: "English",
+  },
+  sameAs: [],
+};
+
 export const LOCAL_BUSINESS_DATA = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",

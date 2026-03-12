@@ -15,6 +15,10 @@ export default function ComingSoon({ title = "This section" }: Props) {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title={`${title} Coming Soon | Luxe Shutters`}
+        description={`${title} is coming soon to Luxe Shutters. Contact us for premium shutters, blinds, and curtains in Temora & the Riverina.`}
+      />
       <Header />
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 lg:px-8">
