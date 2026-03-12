@@ -28,7 +28,7 @@ export default function Gallery() {
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="font-medium text-primary tracking-widest uppercase mb-3 block font-sans text-3xl">Our Work</span>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">Browse our full portfolio</h2>
+              <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">Browse our full portfolio</h1>
               <p className="text-muted-foreground leading-relaxed">From zipscreens to outdoor blinds and shutters — explore all our completed installations.</p>
             </div>
 
