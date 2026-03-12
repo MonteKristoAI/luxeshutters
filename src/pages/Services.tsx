@@ -198,12 +198,6 @@ export default function Services() {
   const navRef = useRef<HTMLDivElement>(null);
   const [activeId, setActiveId] = useState(SERVICES[0].id);
 
-  useEffect(() => {
-    document.title = "Our Services | Luxe Shutters";
-    const meta = document.querySelector('meta[name="description"]');
-    const content = "Premium shutters, blinds, curtains, zipscreens, awnings, and security roller shutters — custom-made and professionally installed.";
-    if (meta) {meta.setAttribute("content", content);} else {const tag = document.createElement("meta");tag.name = "description";tag.content = content;document.head.appendChild(tag);}
-  }, []);
 
   useEffect(() => {
     const ids = SERVICES.map((s) => s.id);
