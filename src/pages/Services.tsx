@@ -19,6 +19,8 @@ import {
 "@/components/ui/accordion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import FAQSection from "@/components/FAQSection";
+import SEOHead from "@/components/SEOHead";
+import StructuredData, { buildBreadcrumbData } from "@/components/StructuredData";
 
 import serviceShutters from "@/assets/service-shutters.jpg";
 import serviceBlinds from "@/assets/service-blinds.jpg";
@@ -198,12 +200,6 @@ export default function Services() {
   const navRef = useRef<HTMLDivElement>(null);
   const [activeId, setActiveId] = useState(SERVICES[0].id);
 
-  useEffect(() => {
-    document.title = "Our Services | Luxe Shutters";
-    const meta = document.querySelector('meta[name="description"]');
-    const content = "Premium shutters, blinds, curtains, zipscreens, awnings, and security roller shutters — custom-made and professionally installed.";
-    if (meta) {meta.setAttribute("content", content);} else {const tag = document.createElement("meta");tag.name = "description";tag.content = content;document.head.appendChild(tag);}
-  }, []);
 
   useEffect(() => {
     const ids = SERVICES.map((s) => s.id);
@@ -221,6 +217,12 @@ export default function Services() {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Our Services | Luxe Shutters — Shutters, Blinds, Curtains & More"
+        description="Premium shutters, blinds, curtains, zipscreens, awnings, and security roller shutters — custom-made and professionally installed in Temora & the Riverina."
+        canonical="/services"
+      />
+      <StructuredData data={buildBreadcrumbData([{ name: "Home", url: "https://luxeshutters.lovable.app/" }, { name: "Services", url: "https://luxeshutters.lovable.app/services" }])} id="ld-breadcrumb" />
       <Header />
 
       <section className="bg-secondary/50 pt-32 pb-14 md:pt-36 md:pb-20">

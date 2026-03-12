@@ -4,6 +4,8 @@ import { Input } from "@/components/ui/input";
 import { BLOG_POSTS } from "@/data/clinicData";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
+import StructuredData, { buildBreadcrumbData } from "@/components/StructuredData";
 
 import galleryWork23 from "@/assets/gallery-work-23.jpg";
 import galleryWork25 from "@/assets/gallery-work-25.jpg";
@@ -33,6 +35,12 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Blog | Luxe Shutters — Tips, Guides & Window Furnishing Insights"
+        description="Practical advice on shutters, blinds, curtains and more from our team — no jargon, just clear answers to questions homeowners actually ask."
+        canonical="/blog"
+      />
+      <StructuredData data={buildBreadcrumbData([{ name: "Home", url: "https://luxeshutters.lovable.app/" }, { name: "Blog", url: "https://luxeshutters.lovable.app/blog" }])} id="ld-breadcrumb" />
       <Header />
       <main>
         <section className="pt-32 pb-16 bg-secondary/50">
