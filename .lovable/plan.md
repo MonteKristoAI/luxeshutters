@@ -1,29 +1,52 @@
 
 
-## Replace "Why Choose Us" Section with "How Does it Work?"
+## Optimizing for Netlify Prerendering + SEO
 
-Replace the current landscaping-focused "Why MonteKristo Landscaping" section with the "How Does it Work?" process steps from the uploaded screenshots, tailored to the Luxe Shutters business.
+### What Netlify Prerender Does (No Code Needed)
+The Netlify Prerender extension runs entirely on Netlify's side. It intercepts crawler/bot requests, renders your SPA in a headless browser, and returns the fully-rendered HTML. **You enable it in the Netlify dashboard** — no code changes needed for the extension itself.
 
-### What Changes
+### What We Should Do in Lovable
 
-**File: `src/components/WhyChooseUs.tsx`**
+The goal is to ensure that when Netlify's headless browser renders each page, the resulting HTML is **rich, unique, and SEO-optimized**. Right now, all pages share the same `<title>` and `<meta>` tags from `index.html`.
 
-- Change the section heading from "Why MonteKristo Landscaping" to "How Does it Work?"
-- Replace the subtitle and intro paragraph with: "Here at Luxe Shutters, we pride ourselves on being a service based company who supplies and installs the highest quality window furnishings and outdoor screens. We help our clients with a simple, step by step process that removes all stress and offers transparency and communication along the way."
-- Replace the 5 landscaping values with 7 process steps:
-  1. **Get in Touch With Us** - Request a Free Quote, Book a discovery call or Upload your plans...
-  2. **Mobile Showroom** - Our consultants will come to your home and discuss your needs...
-  3. **Fast Quote & Follow Up** - You will receive a quote in 48 hours...
-  4. **Swift Order Processing & Transparent Lead Times** - As soon as the quote has been accepted and the 50% deposit is paid...
-  5. **Preparation for a Smooth Installation Experience** - A couple of weeks prior to your install...
-  6. **Installation Day** - The Big Day Arrives! Installation time varies...
-  7. **Post Install Support for your New Products** - Once the installation is finished...
-- Update the background image import (swap from landscaping to a more relevant one, or keep the current visual style)
-- Update the stats at the bottom to reflect shutters/blinds business (keep the layout but adjust labels if needed)
+#### 1. Add per-page SEO meta tags using `document.title` and meta tag updates
+Create a reusable `SEOHead` component that dynamically sets:
+- `document.title` 
+- Meta description
+- Open Graph title, description, URL
+- Twitter card meta
+- Canonical URL
 
-### Technical Details
+Apply unique tags to each page: Home, Services, Gallery, Blog, Contact.
 
-- Only `src/components/WhyChooseUs.tsx` needs editing
-- The numbered list layout (01-07 grid) already works well for this step-by-step format
-- The existing grid layout (`grid-cols-[4rem_1fr_1.5fr]`) maps perfectly to the number + title + description format shown in the screenshots
+#### 2. Add JSON-LD structured data
+Inject structured data scripts into each page for rich search results:
+- **Home page**: `LocalBusiness` schema (name, address, phone, hours, services)
+- **Home/Services page**: `FAQPage` schema from the existing FAQ data
+- **Gallery**: `ImageGallery` schema
+- **All pages**: `BreadcrumbList` schema
+
+#### 3. Add semantic HTML improvements
+- Ensure each page has exactly one `<h1>`
+- Add `<nav>` landmarks, proper `aria-labels`
+- Add `alt` text audit for images
+
+#### 4. Add a sitemap
+Create a `public/sitemap.xml` listing all routes with lastmod dates so crawlers discover every page.
+
+#### 5. Update robots.txt
+Add the sitemap URL reference.
+
+### Files to Create/Edit
+- **Create** `src/components/SEOHead.tsx` — reusable meta tag component
+- **Create** `src/components/StructuredData.tsx` — JSON-LD component
+- **Create** `public/sitemap.xml`
+- **Edit** `public/robots.txt` — add Sitemap directive
+- **Edit** all page files (`Index.tsx`, `Services.tsx`, `Blog.tsx`, `Gallery.tsx`, `Contact.tsx`) — add `SEOHead` + structured data
+- **Edit** `netlify.toml` — add cache header for sitemap
+
+### What You Do on Netlify's Side
+1. Go to **Extensions > Prerender** in your Netlify project dashboard
+2. Click **Enable prerendering**
+3. Redeploy the site
 
