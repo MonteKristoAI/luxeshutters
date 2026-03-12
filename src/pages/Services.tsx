@@ -19,6 +19,8 @@ import {
 "@/components/ui/accordion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import FAQSection from "@/components/FAQSection";
+import SEOHead from "@/components/SEOHead";
+import StructuredData, { buildBreadcrumbData } from "@/components/StructuredData";
 
 import serviceShutters from "@/assets/service-shutters.jpg";
 import serviceBlinds from "@/assets/service-blinds.jpg";
