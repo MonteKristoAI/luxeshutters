@@ -1,29 +1,47 @@
 
 
-## Replace "Why Choose Us" Section with "How Does it Work?"
+## Add `window.prerenderReady` Signal for Faster Netlify Prerendering
 
-Replace the current landscaping-focused "Why MonteKristo Landscaping" section with the "How Does it Work?" process steps from the uploaded screenshots, tailored to the Luxe Shutters business.
+### Current State
+No `window.prerenderReady` signal exists in the codebase. The Netlify Prerender extension will wait for network idle or 10-second timeout instead of knowing exactly when content is ready.
 
-### What Changes
+### Goal
+Implement a signal that tells Netlify's headless browser when page content (SEO meta tags, JSON-LD, main content) is fully rendered and safe to capture.
 
-**File: `src/components/WhyChooseUs.tsx`**
+### Approach
 
-- Change the section heading from "Why MonteKristo Landscaping" to "How Does it Work?"
-- Replace the subtitle and intro paragraph with: "Here at Luxe Shutters, we pride ourselves on being a service based company who supplies and installs the highest quality window furnishings and outdoor screens. We help our clients with a simple, step by step process that removes all stress and offers transparency and communication along the way."
-- Replace the 5 landscaping values with 7 process steps:
-  1. **Get in Touch With Us** - Request a Free Quote, Book a discovery call or Upload your plans...
-  2. **Mobile Showroom** - Our consultants will come to your home and discuss your needs...
-  3. **Fast Quote & Follow Up** - You will receive a quote in 48 hours...
-  4. **Swift Order Processing & Transparent Lead Times** - As soon as the quote has been accepted and the 50% deposit is paid...
-  5. **Preparation for a Smooth Installation Experience** - A couple of weeks prior to your install...
-  6. **Installation Day** - The Big Day Arrives! Installation time varies...
-  7. **Post Install Support for your New Products** - Once the installation is finished...
-- Update the background image import (swap from landscaping to a more relevant one, or keep the current visual style)
-- Update the stats at the bottom to reflect shutters/blinds business (keep the layout but adjust labels if needed)
+Create a `usePrerenderReady` hook that sets `window.prerenderReady = true` once:
+1. Route has changed and settled
+2. SEOHead has updated meta tags
+3. StructuredData is injected
+4. Main content components have mounted
 
-### Technical Details
+**Implementation:**
 
-- Only `src/components/WhyChooseUs.tsx` needs editing
-- The numbered list layout (01-07 grid) already works well for this step-by-step format
-- The existing grid layout (`grid-cols-[4rem_1fr_1.5fr]`) maps perfectly to the number + title + description format shown in the screenshots
+1. **Create `src/hooks/usePrerenderReady.ts`**
+   - Hook that accepts a `ready` boolean parameter
+   - Sets `window.prerenderReady = true` when ready
+   - Resets to `false` on route changes
+   - Includes TypeScript declaration for `window.prerenderReady`
+
+2. **Update `src/App.tsx`**
+   - Import and use the hook
+   - Track when route transitions complete
+   - Signal ready after a short delay (500ms) to allow SEO components to finish DOM updates
+
+3. **Type Declaration**
+   - Add to `src/vite-env.d.ts` or a new `global.d.ts`:
+   ```typescript
+   interface Window {
+     prerenderReady?: boolean;
+   }
+   ```
+
+### Expected Outcome
+Netlify's prerender function captures the page faster (potentially <1 second vs 3-6 seconds), improving build/deploy performance and ensuring crawlers get complete HTML.
+
+### Files to Modify
+- Create: `src/hooks/usePrerenderReady.ts`
+- Edit: `src/App.tsx`
+- Edit: `src/vite-env.d.ts` (add window type)
 
