@@ -44,7 +44,7 @@ export default function BookingSection() {
             <p className="text-muted-foreground mb-2"><strong>{form.firstName} {form.lastName}</strong> — {service}</p>
             <p className="text-muted-foreground mb-2">{form.address}, {form.city}</p>
             <p className="text-muted-foreground mb-6">Timeline: {urgency}</p>
-            <p className="text-sm text-muted-foreground">We'll contact you within 1 business day to schedule your free consultation.</p>
+            <p className="text-sm text-muted-foreground">We'll contact you within 1 business day to schedule your free in-home consultation.</p>
           </div>
         </div>
       </section>);
@@ -56,8 +56,8 @@ export default function BookingSection() {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-sm font-medium text-primary tracking-widest uppercase mb-3 block">Start your project</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-sans">Request a free quote</h2>
-          <p className="text-muted-foreground leading-relaxed">Tell us about your home, your style preferences, and your timeline — we'll handle the rest.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 font-sans">Get Your Free Measure & Quote</h2>
+          <p className="text-muted-foreground leading-relaxed">Tell us about your home, your style preferences, and your timeline — we'll handle the rest. No obligation. We come to you across Regional NSW.</p>
         </div>
 
         <div className={`grid grid-cols-1 lg:grid-cols-3 gap-8 scroll-fade ${isVisible ? "visible" : ""}`}>
@@ -104,8 +104,8 @@ export default function BookingSection() {
                 <button onClick={prevStep} className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-4"><ChevronLeft className="w-4 h-4" /> Back</button>
                 <h3 className="font-serif text-xl font-semibold mb-4">Your location</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                  <div className="sm:col-span-2"><label className="text-sm text-muted-foreground mb-1 block">Street address *</label><Input value={form.address} onChange={(e) => setForm({ ...form, address: e.target.value })} placeholder="123 Desert View Dr" /></div>
-                  <div className="sm:col-span-2"><label className="text-sm text-muted-foreground mb-1 block">City *</label><Input value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} placeholder="Temora" /></div>
+                  <div className="sm:col-span-2"><label className="text-sm text-muted-foreground mb-1 block">Street address *</label><Input value={form.address} onChange={(e) => setForm({ ...form, address: e.target.value })} placeholder="123 Main Street" /></div>
+                  <div className="sm:col-span-2"><label className="text-sm text-muted-foreground mb-1 block">City / Town *</label><Input value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} placeholder="e.g. Wagga Wagga, Temora, Griffith" /></div>
                 </div>
                 {form.address && form.city && <Button variant="hero" className="w-full" onClick={nextStep}>Continue</Button>}
               </div>
@@ -118,7 +118,7 @@ export default function BookingSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                   <div><label className="text-sm text-muted-foreground mb-1 block">First name *</label><Input value={form.firstName} onChange={(e) => setForm({ ...form, firstName: e.target.value })} /></div>
                   <div><label className="text-sm text-muted-foreground mb-1 block">Last name *</label><Input value={form.lastName} onChange={(e) => setForm({ ...form, lastName: e.target.value })} /></div>
-                  <div><label className="text-sm text-muted-foreground mb-1 block">Phone *</label><Input value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} /></div>
+                  <div><label className="text-sm text-muted-foreground mb-1 block">Phone *</label><Input value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="0412 345 678" /></div>
                   <div><label className="text-sm text-muted-foreground mb-1 block">Email (optional)</label><Input value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} /></div>
                 </div>
                 <div className="bg-muted/50 rounded-xl p-5 mb-6">
@@ -129,8 +129,8 @@ export default function BookingSection() {
                     <span className="text-muted-foreground">Location:</span><span className="text-foreground">{form.address}, {form.city}</span>
                   </div>
                 </div>
-                <Button variant="hero" size="lg" className="w-full" onClick={handleSubmit} disabled={!form.firstName || !form.lastName || !form.phone}>Submit quote request</Button>
-                <p className="text-xs text-muted-foreground text-center mt-3">We'll contact you within 1 business day to schedule your free consultation.</p>
+                <Button variant="hero" size="lg" className="w-full" onClick={handleSubmit} disabled={!form.firstName || !form.lastName || !form.phone}>Submit Quote Request</Button>
+                <p className="text-xs text-muted-foreground text-center mt-3">We'll contact you within 1 business day to schedule your free in-home consultation.</p>
               </div>
             }
           </div>
@@ -158,7 +158,7 @@ export default function BookingSection() {
                   <span key={city} className="text-xs bg-muted px-2 py-1 rounded-full text-muted-foreground">{city}</span>
                   )}
                 </div>
-                <p className="text-xs text-muted-foreground mt-2">+ surrounding areas across regional NSW</p>
+                <p className="text-xs text-muted-foreground mt-2">+ surrounding areas across Regional NSW</p>
               </div>
             </div>
           </div>
