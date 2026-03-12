@@ -10,38 +10,38 @@ import serviceRollerShutters from "@/assets/service-roller-shutters.jpg";
 
 const services = [
   {
-    title: "Plantation Shutters",
-    description: "Premium plantation shutters custom-made and professionally installed across Wagga Wagga, Griffith, Temora and Regional NSW. Available in timber, PVC, and aluminium.",
+    title: "Shutters",
+    description: "Our shutters combine timeless elegance with exceptional craftsmanship, adding a touch of sophistication to any space.",
     image: serviceShutters,
     anchorId: "shutters",
   },
   {
     title: "Blinds",
-    description: "Versatile roller, venetian, and vertical blinds with motorised and smart-home options. Professionally installed for homes and businesses across Regional NSW.",
+    description: "With their versatility and functionality, our blinds are the perfect blend of fashion and practicality.",
     image: serviceBlinds,
     anchorId: "blinds",
   },
   {
-    title: "Custom Curtains",
-    description: "From sheer voiles to block-out drapes, our curtains are custom-tailored in a huge range of fabrics and heading styles for Regional NSW homes.",
+    title: "Curtains",
+    description: "From sheer elegance to opulent drapes, our curtains offer a wide range of options to suit your personal taste and interior decor.",
     image: serviceCurtains,
     anchorId: "curtains",
   },
   {
     title: "Zipscreens",
-    description: "Wind-rated outdoor zipscreen blinds that transform your patio into a year-round living space. UV protection up to 99% with motorised control.",
+    description: "Sleek design, smooth operation, and customizable options, our zip screens seamlessly blend into your existing architecture.",
     image: serviceZipscreens,
     anchorId: "zipscreens",
   },
   {
     title: "Awnings",
-    description: "Retractable and fixed awnings providing stylish shade and reducing indoor temperatures — ideal for Regional NSW's hot summers.",
+    description: "Our awnings provide the perfect shade solution, protecting you from the scorching sun while adding a touch of elegance.",
     image: serviceAwnings,
     anchorId: "awnings",
   },
   {
     title: "Security Roller Shutters",
-    description: "Robust security roller shutters offering protection against break-ins, storm damage, and noise — with excellent thermal insulation for Regional NSW homes.",
+    description: "Designed to protect your windows and doors, our shutters offer a robust defense against intruders, while adding a layer of privacy and insulation.",
     image: serviceRollerShutters,
     anchorId: "security-roller-shutters",
   },
@@ -79,11 +79,11 @@ export default function ServicesPreview() {
         <div className="max-w-2xl mb-14">
           <div className="w-12 h-0.5 bg-primary mb-6 rounded-full" />
           <h2 className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-foreground mb-4 leading-tight">
-            Window furnishings built around{" "}
+            Services built around{" "}
             <span className="text-primary">your home.</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            From premium plantation shutters and blinds to curtains and outdoor solutions — we supply and install across Wagga Wagga, Griffith, Temora, Young and all of Regional NSW.
+            From premium shutters and blinds to curtains and outdoor solutions — we help you create the living space you've always wanted.
           </p>
         </div>
 
@@ -93,7 +93,7 @@ export default function ServicesPreview() {
 
           <div className="relative bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-500 hover:-translate-y-1 flex flex-col md:flex-row">
             <div className="md:w-1/2 h-56 md:h-auto overflow-hidden relative">
-              <img src={featured.image} alt="Premium plantation shutters installed in a Regional NSW living room" className="w-full h-full object-cover transition-all duration-700 filter brightness-95 group-hover:brightness-100 scale-100 group-hover:scale-[1.06]" />
+              <img src={featured.image} alt={featured.title} className="w-full h-full object-cover transition-all duration-700 filter brightness-95 group-hover:brightness-100 scale-100 group-hover:scale-[1.06]" />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card/20 md:to-card/40" />
             </div>
             <div className="md:w-1/2 p-7 md:p-10 flex flex-col justify-center">
@@ -113,7 +113,7 @@ export default function ServicesPreview() {
           <button key={service.title} onClick={() => goToService(service.anchorId)} className="text-left group">
               <div className="relative bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-500 hover:-translate-y-1.5 h-full flex flex-col">
                 <div className="h-40 overflow-hidden relative">
-                  <img src={service.image} alt={`${service.title} installation in Regional NSW`} className="w-full h-full object-cover transition-all duration-700 filter brightness-[0.92] saturate-[0.9] group-hover:brightness-100 group-hover:saturate-100 scale-100 group-hover:scale-[1.07]" />
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover transition-all duration-700 filter brightness-[0.92] saturate-[0.9] group-hover:brightness-100 group-hover:saturate-100 scale-100 group-hover:scale-[1.07]" />
                   <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent" />
                 </div>
                 <div className="p-5 flex-1 flex flex-col">
@@ -135,7 +135,7 @@ export default function ServicesPreview() {
           <button key={service.title} onClick={() => goToService(service.anchorId)} className="text-left group w-full">
               <div className="relative bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-500 hover:-translate-y-1.5 h-full flex flex-col">
                 <div className="h-40 overflow-hidden relative">
-                  <img src={service.image} alt={`${service.title} installation in Regional NSW`} className="w-full h-full object-cover transition-all duration-700 filter brightness-[0.92] saturate-[0.9] group-hover:brightness-100 group-hover:saturate-100 scale-100 group-hover:scale-[1.07]" />
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover transition-all duration-700 filter brightness-[0.92] saturate-[0.9] group-hover:brightness-100 group-hover:saturate-100 scale-100 group-hover:scale-[1.07]" />
                   <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent" />
                 </div>
                 <div className="p-5 flex-1 flex flex-col">

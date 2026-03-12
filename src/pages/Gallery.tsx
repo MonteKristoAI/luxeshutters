@@ -17,8 +17,8 @@ export default function Gallery() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Our Work — Shutter & Blind Installations Regional NSW | Luxe Shutters"
-        description="Browse our portfolio of plantation shutter, blind, curtain, and zipscreen installations across Wagga Wagga, Griffith, Temora and Regional NSW."
+        title="Gallery | Luxe Shutters — Our Work & Installations"
+        description="Browse our portfolio of shutters, blinds, curtains, zipscreens, and awning installations across Temora and the Riverina region."
         canonical="/gallery"
       />
       <StructuredData data={buildBreadcrumbData([{ name: "Home", url: "https://luxeshutters.lovable.app/" }, { name: "Gallery", url: "https://luxeshutters.lovable.app/gallery" }])} id="ld-breadcrumb" />
@@ -28,8 +28,8 @@ export default function Gallery() {
           <div className="container mx-auto px-4 lg:px-8 relative z-10">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="font-medium text-primary tracking-widest uppercase mb-3 block font-sans text-3xl">Our Work</span>
-              <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">Shutter, Blind & Zipscreen Installations Across Regional NSW</h1>
-              <p className="text-muted-foreground leading-relaxed">From plantation shutters to zipscreens and outdoor blinds — explore completed installations across Wagga Wagga, Griffith, Temora, and Regional NSW.</p>
+              <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">Browse our full portfolio</h1>
+              <p className="text-muted-foreground leading-relaxed">From zipscreens to outdoor blinds and shutters — explore all our completed installations.</p>
             </div>
 
             <div className="flex justify-center gap-2 mb-10 flex-wrap">

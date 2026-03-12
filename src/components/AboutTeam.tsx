@@ -15,13 +15,13 @@ export default function AboutTeam() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-sm font-medium text-primary tracking-widest uppercase mb-3 block">Meet the Founders</span>
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">The families behind Luxe Shutters</h2>
-          <p className="text-muted-foreground leading-relaxed">Built on trust, integrity, and a shared passion for transforming homes across Wagga Wagga, Griffith, Temora, and Regional NSW — Luxe Shutters is a family business at heart.</p>
+          <p className="text-muted-foreground leading-relaxed">Built on trust, integrity, and a shared passion for transforming homes — Luxe Shutters is a family business at heart.</p>
         </div>
 
-        {/* Founder 1 — Campbell & Claire */}
+        {/* Founder 1 — Campbell & Claire: photo left, text right */}
         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16 scroll-fade-left ${isVisible ? "visible" : ""}`}>
           <div className="overflow-hidden rounded-2xl shadow-elevated">
-            <img src={foundersCampbell} alt="Campbell & Claire Maxwell — Luxe Shutters founders in Temora NSW" className="w-full h-[450px] lg:h-[520px] object-cover object-top" />
+            <img src={foundersCampbell} alt="Campbell & Claire Maxwell" className="w-full h-[450px] lg:h-[520px] object-cover object-top" />
           </div>
           <div>
             <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-2">Campbell & Claire Maxwell</h3>
@@ -34,10 +34,10 @@ export default function AboutTeam() {
           </div>
         </div>
 
-        {/* Founder 2 — Chris & Amber */}
+        {/* Founder 2 — Chris & Amber: text left, photo right */}
         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 scroll-fade-right ${isVisible ? "visible" : ""}`} style={{ transitionDelay: "0.15s" }}>
           <div className="lg:order-2 overflow-hidden rounded-2xl shadow-elevated">
-            <img src={foundersChris} alt="Chris & Amber Hanlon — Luxe Shutters founders serving Regional NSW" className="w-full h-[650px] lg:h-[750px] object-cover object-[center_45%]" />
+            <img src={foundersChris} alt="Chris & Amber Hanlon" className="w-full h-[650px] lg:h-[750px] object-cover object-[center_45%]" />
           </div>
           <div className="lg:order-1">
             <h3 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-2">Chris & Amber Hanlon</h3>
@@ -59,11 +59,10 @@ export default function AboutTeam() {
               <MapPin className="w-4 h-4 text-primary" />
               Temora, New South Wales 2666, Australia
             </p>
-            <p className="text-sm text-muted-foreground mt-2">Serving Wagga Wagga, Griffith, Young, Cootamundra, West Wyalong, Junee, Cowra and all of Regional NSW.</p>
           </div>
           <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-border/60 shadow-card">
             <iframe
-              title="Luxe Shutters location — Temora NSW serving Regional NSW"
+              title="Luxe Shutters location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26000!2d147.5344!3d-34.4468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b2646e1b4e6c7e1%3A0x40609b49043f0!2sTemora+NSW+2666!5e0!3m2!1sen!2sau!4v1700000000000"
               className="w-full h-[350px]"
               style={{ border: 0 }}

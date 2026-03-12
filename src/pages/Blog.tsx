@@ -36,8 +36,8 @@ export default function Blog() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Window Furnishing Tips & Guides | Luxe Shutters Blog"
-        description="Practical advice on plantation shutters, blinds, curtains, zipscreens and more for Regional NSW homeowners. Tips, guides, and expert insights from Luxe Shutters."
+        title="Blog | Luxe Shutters — Tips, Guides & Window Furnishing Insights"
+        description="Practical advice on shutters, blinds, curtains and more from our team — no jargon, just clear answers to questions homeowners actually ask."
         canonical="/blog"
       />
       <StructuredData data={buildBreadcrumbData([{ name: "Home", url: "https://luxeshutters.lovable.app/" }, { name: "Blog", url: "https://luxeshutters.lovable.app/blog" }])} id="ld-breadcrumb" />
@@ -46,8 +46,8 @@ export default function Blog() {
         <section className="pt-32 pb-16 bg-secondary/50">
           <div className="container mx-auto px-4 lg:px-8 text-center">
             <span className="text-sm font-medium text-primary tracking-widest uppercase mb-3 block">Our blog</span>
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Window Furnishing Tips & Guides</h1>
-            <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed">Practical advice on plantation shutters, blinds, curtains, and more for Regional NSW homeowners — no jargon, just clear answers to questions you actually ask.</p>
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Tips, Guides & Window Furnishing Insights</h1>
+            <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed">Practical advice on shutters, blinds, curtains, and more from our team — no jargon, just clear answers to questions homeowners actually ask.</p>
           </div>
         </section>
 
@@ -76,7 +76,7 @@ export default function Blog() {
                 {filtered.map((post, i) => (
                   <article key={post.id} className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 group animate-fade-in cursor-pointer" style={{ animationDelay: `${i * 0.06}s` }}>
                     <div className="h-48 overflow-hidden">
-                      <img src={imageMap[post.image] || galleryWork23} alt={`${post.title} — window furnishing guide for Regional NSW homeowners`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+                      <img src={imageMap[post.image] || galleryWork23} alt={post.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
                     </div>
                     <div className="p-5">
                       <div className="flex items-center gap-3 mb-3">

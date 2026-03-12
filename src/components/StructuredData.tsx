@@ -29,24 +29,21 @@ export const ORGANIZATION_DATA = {
   logo: "https://luxeshutters.lovable.app/logo-widget.png",
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+61-1800-465-893",
+    telephone: "1800-465-893",
     contactType: "customer service",
     areaServed: "AU",
     availableLanguage: "English",
   },
-  sameAs: [
-    "https://www.facebook.com/Luxeshutters",
-    "https://www.instagram.com/luxe_shutters"
-  ],
+  sameAs: [],
 };
 
 export const LOCAL_BUSINESS_DATA = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Luxe Shutters",
-  description: "Premium plantation shutters, blinds, curtains, zipscreens, awnings, and security roller shutters — custom-made and professionally installed across Regional NSW.",
+  description: "Premium shutters, blinds, curtains, zipscreens, and awnings — custom-made and professionally installed.",
   url: "https://luxeshutters.lovable.app",
-  telephone: "+61-1800-465-893",
+  telephone: "1800-465-893",
   email: "admin@luxeshutters.com.au",
   address: {
     "@type": "PostalAddress",
@@ -54,45 +51,6 @@ export const LOCAL_BUSINESS_DATA = {
     addressRegion: "New South Wales",
     postalCode: "2666",
     addressCountry: "AU",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: -34.4468,
-    longitude: 147.5344,
-  },
-  areaServed: [
-    { "@type": "City", name: "Temora" },
-    { "@type": "City", name: "Wagga Wagga" },
-    { "@type": "City", name: "Griffith" },
-    { "@type": "City", name: "Young" },
-    { "@type": "City", name: "West Wyalong" },
-    { "@type": "City", name: "Cootamundra" },
-    { "@type": "City", name: "Junee" },
-    { "@type": "City", name: "Cowra" },
-    { "@type": "City", name: "Coolamon" },
-    { "@type": "City", name: "Leeton" },
-    { "@type": "City", name: "Forbes" },
-    { "@type": "City", name: "Condobolin" },
-    { "@type": "City", name: "Lake Cargelligo" },
-    { "@type": "City", name: "Grenfell" },
-  ],
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Window Furnishing Products",
-    itemListElement: [
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Plantation Shutters Installation" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Roller Blinds Installation" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Custom Curtains Installation" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Zipscreen Installation" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Awning Installation" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Security Roller Shutter Installation" } },
-    ],
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "183",
-    bestRating: "5",
   },
   openingHoursSpecification: [
     {
@@ -103,11 +61,7 @@ export const LOCAL_BUSINESS_DATA = {
     },
   ],
   priceRange: "$$",
-  image: "https://luxeshutters.lovable.app/logo-widget.png",
-  sameAs: [
-    "https://www.facebook.com/Luxeshutters",
-    "https://www.instagram.com/luxe_shutters"
-  ],
+  image: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bc95d200-e15f-4b54-9444-99e93d853141/id-preview-0cbc8117--0b743ad7-429c-4af6-a513-6f5a28979926.lovable.app-1771424800082.png",
 };
 
 export function buildFAQData(faqs: { q: string; a: string }[]) {
