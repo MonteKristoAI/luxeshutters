@@ -1,4 +1,4 @@
-import { ShieldCheck, Award, Zap } from "lucide-react";
+import { ShieldCheck, Award, Zap, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-shutters.png";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -6,7 +6,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 const trustChips = [
   { icon: ShieldCheck, label: "Licensed & insured" },
   { icon: Award, label: "Certified installers" },
-  { icon: Zap, label: "Energy-efficient experts" },
+  { icon: Zap, label: "Energy-efficient products" },
+  { icon: MapPin, label: "Serving Regional NSW" },
 ];
 
 export default function HeroSection() {
@@ -21,20 +22,12 @@ export default function HeroSection() {
     }
   };
 
-  const scrollToGallery = () => {
-    if (location.pathname === "/") {
-      document.getElementById("gallery")?.scrollIntoView({ behavior: "smooth" });
-    } else {
-      navigate("/#gallery");
-    }
-  };
-
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Luxurious living room with premium plantation shutters"
+          alt="Premium plantation shutters installed in a Regional NSW home"
           className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#1a1f2e]/95 via-[#1a1f2e]/75 to-[#1a1f2e]/30" />
       </div>
@@ -45,10 +38,10 @@ export default function HeroSection() {
             Where Style Meets Everyday Comfort.
           </p>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
-            Creating <span className="text-accent">LIVING</span> spaces people <span className="text-accent">LOVE</span>
+            Premium Plantation Shutters, Blinds & Curtains in <span className="text-accent">Regional NSW</span>
           </h1>
           <p className="text-lg md:text-xl text-white/75 mb-8 leading-relaxed">
-            Luxe Shutters brings style and comfort to your home with premium shutters, blinds, and curtains designed for living spaces you'll truly enjoy.
+            Custom window furnishings supplied and installed across Wagga Wagga, Griffith, Temora and surrounding NSW areas. Free in-home measure and quote.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -56,14 +49,14 @@ export default function HeroSection() {
               size="xl"
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium shadow-lg"
               onClick={scrollToBooking}>
-              Get a Free Quote
+              Get a Free Measure & Quote
             </Button>
             <Button
               variant="outline"
               size="xl"
               className="border-white/30 text-white bg-transparent hover:bg-white/10 backdrop-blur-sm"
-              onClick={scrollToGallery}>
-              Call Us
+              asChild>
+              <a href="tel:1800465893">Call Us — 1800 465 893</a>
             </Button>
           </div>
 

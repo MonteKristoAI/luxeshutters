@@ -2,13 +2,13 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import whyChooseBg from "@/assets/hero-shutters.png";
 
 const steps = [
-  { number: "01", title: "Get in Touch With Us", body: "Request a Free Quote, Book a discovery call or Upload your plans. We will then organize a time to visit your home for a Free Measure & Quote consultation." },
-  { number: "02", title: "Mobile Showroom", body: "Our consultants will come to your home and discuss your needs for each window. We bring our Mobile Showroom so you can see and feel the quality of the products we offer, right in your own home." },
-  { number: "03", title: "Fast Quote & Follow Up", body: "You will receive a quote in 48 hours. Our team will follow up with you to answer any questions and make sure you're completely happy before moving forward." },
+  { number: "01", title: "Get in Touch With Us", body: "Request a Free Measure & Quote, Book a discovery call or Upload your plans. We will then organise a time to visit your home for a Free Measure & Quote consultation — available across Wagga Wagga, Griffith, Temora, Young and all of Regional NSW." },
+  { number: "02", title: "Mobile Showroom", body: "Our consultants will come to your home and discuss your needs for each window. We bring our Mobile Showroom so you can see and feel the quality of the plantation shutters, blinds, curtains, and outdoor screens we offer, right in your own home." },
+  { number: "03", title: "Fast Quote & Follow Up", body: "You will receive a detailed quote within 48 hours. Our team will follow up with you to answer any questions and make sure you're completely happy before moving forward." },
   { number: "04", title: "Swift Order Processing & Transparent Lead Times", body: "As soon as the quote has been accepted and the 50% deposit is paid, we place your order immediately. We keep you informed with clear lead times so you always know what to expect." },
   { number: "05", title: "Preparation for a Smooth Installation Experience", body: "A couple of weeks prior to your install, we'll be in touch to confirm dates, access requirements, and any final details to ensure everything runs seamlessly on the day." },
-  { number: "06", title: "Installation Day", body: "The Big Day Arrives! Installation time varies depending on the scope of work. Our professional installers treat your home with care and ensure a flawless finish." },
-  { number: "07", title: "Post Install Support for your New Products", body: "Once the installation is finished, we walk you through your new products, answer any questions, and make sure you're 100% satisfied. We're always just a call away for ongoing support." },
+  { number: "06", title: "Installation Day", body: "The Big Day Arrives! Installation time varies depending on the scope of work — typically 1–3 hours per window. Our professional installers treat your home with care and ensure a flawless finish." },
+  { number: "07", title: "Post Install Support for your New Products", body: "Once the installation is finished, we walk you through your new window furnishings, answer any questions, and make sure you're 100% satisfied. We're always just a call away for ongoing support." },
 ];
 
 
@@ -18,7 +18,7 @@ export default function WhyChooseUs() {
   return (
     <section ref={ref} className="relative py-24 lg:py-32 overflow-hidden" style={{ background: 'linear-gradient(180deg, hsl(210 20% 95%), hsl(210 18% 97%))' }}>
       <div className="absolute inset-0 overflow-hidden">
-        <img src={whyChooseBg} alt="" className="w-full h-full object-cover opacity-[0.55]" />
+        <img src={whyChooseBg} alt="Premium plantation shutters installed in a Regional NSW home" className="w-full h-full object-cover opacity-[0.55]" />
         <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, hsl(210 20% 95% / 0.88), hsl(210 18% 97% / 0.90))' }} />
       </div>
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none" />
@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
             How Does it Work?
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-            Here at Luxe Shutters, we pride ourselves on being a service based company who supplies and installs the highest quality window furnishings and outdoor screens. We help our clients with a simple, step by step process that removes all stress and offers transparency and communication along the way.
+            Here at Luxe Shutters, we pride ourselves on being a service-based company who supplies and installs the highest quality window furnishings and outdoor screens across Regional NSW. We help our clients with a simple, step-by-step process that removes all stress and offers transparency and communication along the way.
           </p>
         </div>
 
@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
           {[
           { value: "4.9 / 5", label: "Average customer rating" },
           { value: "10+ yrs", label: "Industry experience" },
-          { value: "5,000+", label: "Products installed" }].
+          { value: "5,000+", label: "Products installed across Regional NSW" }].
           map((stat) =>
           <div key={stat.label} className="bg-card p-10 text-center">
               <div className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-2">{stat.value}</div>

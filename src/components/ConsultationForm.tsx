@@ -44,13 +44,13 @@ const ConsultationForm = ({ showMap = true }: {showMap?: boolean;}) => {
               Your Dream Window<br />Furnishings Are Just<br />One Call Away
             </h2>
             <p className="text-[15px] leading-relaxed mb-6 max-w-lg" style={{ color: 'hsl(215 15% 55%)' }}>
-              Luxe is dedicated to providing high quality, stylish, and fit for purpose solutions throughout your home. We supply and install plantation shutters, curtains, blinds, outdoor zip screens, awnings, and security roller shutters.
+              Luxe Shutters is dedicated to providing high quality, stylish, and fit-for-purpose window furnishing solutions throughout your home. We supply and install plantation shutters, curtains, blinds, outdoor zipscreens, awnings, and security roller shutters across Regional NSW.
             </p>
 
             <div className="rounded-xl p-4 mb-6" style={{ background: 'hsl(215 20% 16%)' }}>
               <p className="text-xs font-semibold tracking-wide uppercase mb-2" style={{ color: 'hsl(210 20% 75%)' }}>Service Areas</p>
               <p className="text-sm leading-relaxed" style={{ color: 'hsl(215 15% 55%)' }}>
-                Wagga · Junee · Coolamon · Temora · Cootamundra · Lake Cargelligo · Young · Grenfell · Griffith · Leeton · Forbes · West Wyalong · Condobolin & surrounds
+                Wagga Wagga · Junee · Coolamon · Temora · Cootamundra · Lake Cargelligo · Young · Grenfell · Griffith · Leeton · Forbes · West Wyalong · Condobolin & surrounds
               </p>
             </div>
 
@@ -97,21 +97,21 @@ const ConsultationForm = ({ showMap = true }: {showMap?: boolean;}) => {
               </div>
               <div className="space-y-1.5">
                 <Label htmlFor="cf-phone" className="text-white/80">Phone Number</Label>
-                <Input id="cf-phone" name="phone" type="tel" required maxLength={20} placeholder="(480) 555-0000" className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-primary/50" />
+                <Input id="cf-phone" name="phone" type="tel" required maxLength={20} placeholder="0412 345 678" className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-primary/50" />
               </div>
               <div className="space-y-1.5">
                 <Label htmlFor="cf-message" className="text-white/80">Message{" "}<span className="text-white/40 font-normal">(optional)</span></Label>
                 <Textarea id="cf-message" name="message" maxLength={1000} rows={3} placeholder="Tell us about your project…" className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-primary/50" />
               </div>
-              <Button type="submit" variant="hero" size="lg" className="w-full" disabled={loading}>{loading ? "Sending…" : "Request a Free Consultation"}</Button>
-              <p className="text-xs text-white/40 text-center">We respect your privacy and will never share your details.</p>
+              <Button type="submit" variant="hero" size="lg" className="w-full" disabled={loading}>{loading ? "Sending…" : "Book a Free Home Consultation"}</Button>
+              <p className="text-xs text-white/40 text-center">No obligation. We come to you. We respect your privacy and will never share your details.</p>
             </form>
           </div>
         </div>
 
         {showMap &&
         <div className="mt-10 rounded-2xl overflow-hidden border border-border/60 shadow-sm opacity-80">
-            <iframe title="Luxe Shutters location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26000!2d147.5344!3d-34.4468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b2646e1b4e6c7e1%3A0x40609b49043f0!2sTemora+NSW+2666!5e0!3m2!1sen!2sau!4v1700000000000" width="100%" height="210" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="w-full grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
+            <iframe title="Luxe Shutters location — Temora NSW" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26000!2d147.5344!3d-34.4468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b2646e1b4e6c7e1%3A0x40609b49043f0!2sTemora+NSW+2666!5e0!3m2!1sen!2sau!4v1700000000000" width="100%" height="210" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="w-full grayscale-[30%] hover:grayscale-0 transition-all duration-500" />
           </div>
         }
       </div>

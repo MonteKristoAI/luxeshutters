@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Blog from "./pages/Blog";
-
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
@@ -14,6 +13,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import FloatingCallButton from "./components/FloatingCallButton";
 import StickyCallBar from "./components/StickyCallBar";
 import { usePrerenderReady } from "./hooks/usePrerenderReady";
+import LocationPage from "./pages/locations/LocationPage";
+import LOCATION_PAGES from "./data/locationPages";
 
 function AppRoutes() {
   usePrerenderReady(500);
@@ -28,13 +29,14 @@ function AppRoutes() {
         <Route path="/services" element={<Services />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
+        {LOCATION_PAGES.map((page) => (
+          <Route key={page.slug} path={`/${page.slug}`} element={<LocationPage data={page} />} />
+        ))}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
 }
-
-
 
 const queryClient = new QueryClient();
 

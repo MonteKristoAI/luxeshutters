@@ -7,8 +7,8 @@ import StructuredData, { buildBreadcrumbData } from "@/components/StructuredData
 const Contact = () => (
   <div className="min-h-screen">
     <SEOHead
-      title="Contact Us | Luxe Shutters — Free In-Home Consultation"
-      description="Get in touch with Luxe Shutters for a free in-home consultation. Call 1800-465-893 or fill out our form. Serving Temora & the Riverina region."
+      title="Contact Luxe Shutters — Free Measure & Quote Regional NSW"
+      description="Get in touch with Luxe Shutters for a free in-home measure and quote. Serving Wagga Wagga, Griffith, Temora, Young and Regional NSW. Call 1800 465 893."
       canonical="/contact"
     />
     <StructuredData data={buildBreadcrumbData([{ name: "Home", url: "https://luxeshutters.lovable.app/" }, { name: "Contact", url: "https://luxeshutters.lovable.app/contact" }])} id="ld-breadcrumb" />
