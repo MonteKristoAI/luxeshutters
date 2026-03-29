@@ -123,16 +123,16 @@ export default function ReviewsSection() {
               </div>
 
               {/* Review text */}
-              <p className="text-sm text-foreground/80 leading-relaxed flex-1 mb-3.5">{review.text}</p>
+              <p className={`text-sm text-foreground/80 leading-relaxed mb-3.5 ${!review.photos?.length ? "flex-1" : ""}`}>{review.text}</p>
 
               {/* Photos grid */}
               {review.photos && review.photos.length > 0 && (
-                <div className={`grid gap-1.5 mb-3.5 ${review.photos.length === 1 ? "grid-cols-1" : review.photos.length === 2 ? "grid-cols-2" : "grid-cols-3"}`}>
+                <div className={`grid gap-1.5 mb-3.5 flex-1 min-h-[120px] ${review.photos.length === 1 ? "grid-cols-1" : review.photos.length === 2 ? "grid-cols-2" : "grid-cols-3"}`}>
                   {review.photos.slice(0, 3).map((photo, pi) => (
                     <button
                       key={pi}
                       onClick={() => openLightbox(review.photos!, pi)}
-                      className="relative aspect-square rounded-lg overflow-hidden group"
+                      className="relative rounded-lg overflow-hidden group w-full h-full"
                     >
                       <img
                         src={photo}
