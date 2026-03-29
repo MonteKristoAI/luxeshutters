@@ -32,7 +32,23 @@ export default function BookingSection() {
 
   const nextStep = () => setStep((s) => Math.min(s + 1, 4));
   const prevStep = () => setStep((s) => Math.max(s - 1, 1));
-  const handleSubmit = () => setSubmitted(true);
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async () => {
+    setSubmitting(true);
+    try {
+      await fetch("https://primary-production-5fdce.up.railway.app/webhook/luxe-quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, service, urgency }),
+      });
+    } catch (_) {
+      // Silent fail — still show success to user
+    } finally {
+      setSubmitting(false);
+      setSubmitted(true);
+    }
+  };
 
   if (submitted) {
     return (
@@ -129,7 +145,7 @@ export default function BookingSection() {
                     <span className="text-muted-foreground">Location:</span><span className="text-foreground">{form.address}, {form.city}</span>
                   </div>
                 </div>
-                <Button variant="hero" size="lg" className="w-full" onClick={handleSubmit} disabled={!form.firstName || !form.lastName || !form.phone}>Submit quote request</Button>
+                <Button variant="hero" size="lg" className="w-full" onClick={handleSubmit} disabled={!form.firstName || !form.lastName || !form.phone || submitting}>{submitting ? "Submitting…" : "Submit quote request"}</Button>
                 <p className="text-xs text-muted-foreground text-center mt-3">We'll contact you within 1 business day to schedule your free consultation.</p>
               </div>
             }

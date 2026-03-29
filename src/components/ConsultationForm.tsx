@@ -18,17 +18,31 @@ const ConsultationForm = ({ showMap = true }: {showMap?: boolean;}) => {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+    const formData = new FormData(e.target as HTMLFormElement);
+    try {
+      await fetch("https://primary-production-5fdce.up.railway.app/webhook/luxe-consultation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          message: formData.get("message"),
+        }),
+      });
+    } catch (_) {
+      // Silent fail — still show success to user
+    } finally {
       setLoading(false);
       toast({
         title: "Request received",
         description: "We'll call you back within one business day."
       });
       (e.target as HTMLFormElement).reset();
-    }, 800);
+    }
   };
 
   return (
