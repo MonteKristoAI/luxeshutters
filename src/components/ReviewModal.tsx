@@ -45,7 +45,15 @@ export default function ReviewModal({ open, onClose }: Props) {
   };
 
   const toggleCategory = (cat: string) => { setSelectedCategories((prev) => prev.includes(cat) ? prev.filter((c) => c !== cat) : [...prev, cat]); };
-  const handleFeedbackSubmit = () => { setStep("thanks"); setTimeout(handleClose, 2000); };
+  const handleFeedbackSubmit = () => {
+    fetch("https://primary-production-5fdce.up.railway.app/webhook/luxe-feedback", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ rating, categories: selectedCategories, improvement, message }),
+    }).catch(() => {});
+    setStep("thanks");
+    setTimeout(handleClose, 2000);
+  };
 
   return (
     <div className="fixed inset-0 z-50 bg-foreground/60 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in" onClick={handleClose}>
@@ -95,16 +103,10 @@ export default function ReviewModal({ open, onClose }: Props) {
             <div className="mb-6"><label className="text-sm font-medium mb-2 block">Message</label><Textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Any additional details..." className="min-h-[100px]" /></div>
             <Button variant="hero" className="w-full" onClick={handleFeedbackSubmit}>Submit Feedback</Button>
             <p className="text-center text-xs text-muted-foreground/60 mt-4">
-              If you'd still prefer to share your experience publicly, you're welcome to{" "}
-              <a
-                href="https://g.page/r/CW9V9yfTp18mEAE/review"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-2 hover:text-muted-foreground transition-colors"
-              >
-                leave a Google review here
+              Prefer a public review?{" "}
+              <a href="https://g.page/r/CW9V9yfTp18mEAE/review" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-muted-foreground transition-colors">
+                Leave one on Google.
               </a>
-              .
             </p>
           </div>
         )}
