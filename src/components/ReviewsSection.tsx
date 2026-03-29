@@ -104,10 +104,12 @@ export default function ReviewsSection() {
                     <span className="font-semibold text-sm text-foreground truncate">{review.name}</span>
                     <BadgeCheck className="w-4 h-4 text-blue-500 shrink-0" />
                   </div>
-                  <div className="flex items-center gap-1 text-xs text-muted-foreground mt-0.5">
-                    <MapPin className="w-3 h-3" />
-                    <span>{review.location}</span>
-                  </div>
+                  {review.location !== "NSW, Australia" && (
+                    <div className="flex items-center gap-1 text-xs text-muted-foreground mt-0.5">
+                      <MapPin className="w-3 h-3" />
+                      <span>{review.location}</span>
+                    </div>
+                  )}
                 </div>
                 <GoogleIcon className="w-5 h-5 shrink-0 opacity-40" />
               </div>
