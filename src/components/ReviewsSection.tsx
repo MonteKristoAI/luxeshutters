@@ -104,24 +104,27 @@ export default function ReviewsSection() {
                     <span className="font-semibold text-sm text-foreground truncate">{review.name}</span>
                     <BadgeCheck className="w-4 h-4 text-blue-500 shrink-0" />
                   </div>
-                  {review.location !== "NSW, Australia" && (
-                    <div className="flex items-center gap-1 text-xs text-muted-foreground mt-0.5">
-                      <MapPin className="w-3 h-3" />
-                      <span>{review.location}</span>
-                    </div>
-                  )}
+                  <div className="flex items-center gap-2 mt-0.5 flex-wrap">
+                    <span className="text-xs text-muted-foreground">{review.timeAgo}</span>
+                    {review.location !== "NSW, Australia" && (
+                      <>
+                        <span className="text-muted-foreground/40 text-xs">·</span>
+                        <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                          <MapPin className="w-3 h-3" />
+                          <span>{review.location}</span>
+                        </div>
+                      </>
+                    )}
+                  </div>
                 </div>
                 <GoogleIcon className="w-5 h-5 shrink-0 opacity-40" />
               </div>
 
-              {/* Stars + time */}
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-0.5">
-                  {Array.from({ length: 5 }).map((_, j) => (
-                    <Star key={j} className={`w-4 h-4 ${j < review.rating ? "text-amber-400 fill-amber-400" : "text-muted"}`} />
-                  ))}
-                </div>
-                <span className="text-xs text-muted-foreground">{review.timeAgo}</span>
+              {/* Stars */}
+              <div className="flex items-center gap-0.5 mb-3">
+                {Array.from({ length: 5 }).map((_, j) => (
+                  <Star key={j} className={`w-4 h-4 ${j < review.rating ? "text-amber-400 fill-amber-400" : "text-muted"}`} />
+                ))}
               </div>
 
               {/* Review text */}
