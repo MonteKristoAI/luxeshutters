@@ -11,8 +11,8 @@ const AVATAR_COLORS = [
   "bg-cyan-600", "bg-pink-600",
 ];
 
-const avgRating = (REVIEWS.reduce((a, r) => a + r.rating, 0) / REVIEWS.length).toFixed(1);
-const totalReviews = 183;
+const avgRating = "5.0";
+const totalReviews = 16;
 
 export default function ReviewsSection() {
   const [modalOpen, setModalOpen] = useState(false);
