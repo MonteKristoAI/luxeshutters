@@ -36,7 +36,7 @@ export default function ReviewModal({ open, onClose }: Props) {
 
   const handleRatingSubmit = () => {
     if (rating >= 4) {
-      window.open("https://g.page/r/CRgguphQBNFxEBI/review", "_blank");
+      window.open("https://g.page/r/CW9V9yfTp18mEAE/review", "_blank");
       setStep("thanks");
       setTimeout(handleClose, 2000);
     } else {
@@ -94,6 +94,18 @@ export default function ReviewModal({ open, onClose }: Props) {
             <div className="mb-5"><label className="text-sm font-medium mb-2 block">How can we do better?</label><Input value={improvement} onChange={(e) => setImprovement(e.target.value)} placeholder="Tell us what we could improve" /></div>
             <div className="mb-6"><label className="text-sm font-medium mb-2 block">Message</label><Textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Any additional details..." className="min-h-[100px]" /></div>
             <Button variant="hero" className="w-full" onClick={handleFeedbackSubmit}>Submit Feedback</Button>
+            <p className="text-center text-xs text-muted-foreground/60 mt-4">
+              If you'd still prefer to share your experience publicly, you're welcome to{" "}
+              <a
+                href="https://g.page/r/CW9V9yfTp18mEAE/review"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 hover:text-muted-foreground transition-colors"
+              >
+                leave a Google review here
+              </a>
+              .
+            </p>
           </div>
         )}
       </div>
