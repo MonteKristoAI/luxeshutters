@@ -104,7 +104,7 @@ export default function ReviewModal({ open, onClose }: Props) {
             <Button variant="hero" className="w-full" onClick={handleFeedbackSubmit}>Submit Feedback</Button>
             <p className="text-center text-xs text-muted-foreground/60 mt-4">
               Prefer a public review?{" "}
-              <a href="https://g.page/r/CW9V9yfTp18mEAE/review" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-muted-foreground transition-colors">
+              <a href="https://g.page/r/CW9V9yfTp18mEAE/review" target="_blank" rel="noopener noreferrer" className="hover:text-muted-foreground transition-colors">
                 Leave one on Google.
               </a>
             </p>
