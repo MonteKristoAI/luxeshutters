@@ -10,7 +10,19 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 User-agent: *
 Allow: /
 
-Sitemap: https://luxeshutters.lovable.app/sitemap.xml
+Sitemap: https://luxeshutters.com.au/sitemap.xml

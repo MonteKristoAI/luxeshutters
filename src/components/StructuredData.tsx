@@ -21,12 +21,14 @@ export default function StructuredData({ data, id = "structured-data" }: Structu
   return null;
 }
 
+const SITE_URL = import.meta.env.VITE_SITE_URL || "https://luxeshutters.com.au";
+
 export const ORGANIZATION_DATA = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Luxe Shutters",
-  url: "https://luxeshutters.lovable.app",
-  logo: "https://luxeshutters.lovable.app/logo-widget.png",
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo-widget.png`,
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "1800-465-893",
@@ -34,23 +36,32 @@ export const ORGANIZATION_DATA = {
     areaServed: "AU",
     availableLanguage: "English",
   },
-  sameAs: [],
+  sameAs: [
+    "https://www.facebook.com/Luxeshutters",
+    "https://www.instagram.com/luxe_shutters",
+  ],
 };
 
 export const LOCAL_BUSINESS_DATA = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Luxe Shutters",
-  description: "Premium shutters, blinds, curtains, zipscreens, and awnings — custom-made and professionally installed.",
-  url: "https://luxeshutters.lovable.app",
+  description: "Premium shutters, blinds, curtains, zipscreens, and awnings -- custom-made and professionally installed in Temora and the Riverina region.",
+  url: SITE_URL,
   telephone: "1800-465-893",
   email: "admin@luxeshutters.com.au",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "185 Hoskins St",
     addressLocality: "Temora",
     addressRegion: "New South Wales",
     postalCode: "2666",
     addressCountry: "AU",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -34.4468,
+    longitude: 147.5344,
   },
   openingHoursSpecification: [
     {
@@ -61,8 +72,36 @@ export const LOCAL_BUSINESS_DATA = {
     },
   ],
   priceRange: "$$",
-  image: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bc95d200-e15f-4b54-9444-99e93d853141/id-preview-0cbc8117--0b743ad7-429c-4af6-a513-6f5a28979926.lovable.app-1771424800082.png",
+  image: `${SITE_URL}/og-image.png`,
+  areaServed: [
+    { "@type": "City", name: "Temora" },
+    { "@type": "City", name: "Wagga Wagga" },
+    { "@type": "City", name: "Young" },
+    { "@type": "City", name: "Cootamundra" },
+    { "@type": "City", name: "West Wyalong" },
+    { "@type": "City", name: "Griffith" },
+  ],
 };
+
+export function buildServiceData(serviceName: string, serviceDescription: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: serviceName,
+    description: serviceDescription,
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Luxe Shutters",
+      url: SITE_URL,
+    },
+    areaServed: {
+      "@type": "State",
+      name: "New South Wales",
+    },
+  };
+}
+
+export { SITE_URL };
 
 export function buildFAQData(faqs: { q: string; a: string }[]) {
   return {

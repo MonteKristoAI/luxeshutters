@@ -3,7 +3,7 @@ import { X } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import StructuredData, { buildBreadcrumbData } from "@/components/StructuredData";
+import StructuredData, { buildBreadcrumbData, SITE_URL } from "@/components/StructuredData";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { galleryImages, galleryTabs, type GalleryTab } from "@/data/galleryData";
 
@@ -21,7 +21,7 @@ export default function Gallery() {
         description="Browse our portfolio of shutters, blinds, curtains, zipscreens, and awning installations across Temora and the Riverina region."
         canonical="/gallery"
       />
-      <StructuredData data={buildBreadcrumbData([{ name: "Home", url: "https://luxeshutters.lovable.app/" }, { name: "Gallery", url: "https://luxeshutters.lovable.app/gallery" }])} id="ld-breadcrumb" />
+      <StructuredData data={buildBreadcrumbData([{ name: "Home", url: `${SITE_URL}/` }, { name: "Gallery", url: `${SITE_URL}/gallery` }])} id="ld-breadcrumb" />
       <Header />
       <main className="pt-24 lg:pt-32">
         <section ref={ref} className="relative py-20 lg:py-28 overflow-hidden bg-background">

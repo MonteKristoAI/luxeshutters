@@ -25,14 +25,12 @@ export const TEAM: TeamMember[] = [
     role: "Owner & Lead Estimator",
     focus: "15+ years designing and installing premium window furnishings — from shutters and blinds to outdoor screens",
     image: "team-ryan",
-    credentials: ["Certified Installer", "Licensed Contractor"],
   },
   {
     name: "Marco Vasquez",
     role: "Senior Project Manager",
     focus: "Full-scale shutter and blind installation projects, from initial measurement to final inspection",
     image: "team-marco",
-    credentials: ["AAMA Certified", "OSHA Certified"],
   },
   {
     name: "Jenna Park",
@@ -45,14 +43,12 @@ export const TEAM: TeamMember[] = [
     role: "Lead Installer",
     focus: "Precision shutter fitting, blind installation, zipscreen mounting, and finish detailing",
     image: "team-derek",
-    credentials: ["Master Installer Certified"],
   },
   {
     name: "Lisa Nguyen",
     role: "Estimator & Project Planner",
     focus: "On-site measurements, project scoping, timelines, and detailed cost planning",
     image: "team-lisa",
-    credentials: ["NFRC Certified"],
   },
 ];
 

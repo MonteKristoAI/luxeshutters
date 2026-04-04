@@ -5,7 +5,7 @@ import { BLOG_POSTS } from "@/data/clinicData";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import StructuredData, { buildBreadcrumbData } from "@/components/StructuredData";
+import StructuredData, { buildBreadcrumbData, SITE_URL } from "@/components/StructuredData";
 
 import galleryWork23 from "@/assets/gallery-work-23.jpg";
 import galleryWork25 from "@/assets/gallery-work-25.jpg";
@@ -40,7 +40,7 @@ export default function Blog() {
         description="Practical advice on shutters, blinds, curtains and more from our team — no jargon, just clear answers to questions homeowners actually ask."
         canonical="/blog"
       />
-      <StructuredData data={buildBreadcrumbData([{ name: "Home", url: "https://luxeshutters.lovable.app/" }, { name: "Blog", url: "https://luxeshutters.lovable.app/blog" }])} id="ld-breadcrumb" />
+      <StructuredData data={buildBreadcrumbData([{ name: "Home", url: `${SITE_URL}/` }, { name: "Blog", url: `${SITE_URL}/blog` }])} id="ld-breadcrumb" />
       <Header />
       <main>
         <section className="pt-32 pb-16 bg-secondary/50">

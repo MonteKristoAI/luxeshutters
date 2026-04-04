@@ -7,8 +7,8 @@ interface SEOHeadProps {
   ogType?: string;
 }
 
-const BASE_URL = "https://luxeshutters.lovable.app";
-const OG_IMAGE = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bc95d200-e15f-4b54-9444-99e93d853141/id-preview-0cbc8117--0b743ad7-429c-4af6-a513-6f5a28979926.lovable.app-1771424800082.png";
+const BASE_URL = import.meta.env.VITE_SITE_URL || "https://luxeshutters.com.au";
+const OG_IMAGE = `${BASE_URL}/og-image.png`;
 
 function setMeta(name: string, content: string, isProperty = false) {
   const attr = isProperty ? "property" : "name";

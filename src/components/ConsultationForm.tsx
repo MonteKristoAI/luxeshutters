@@ -111,7 +111,7 @@ const ConsultationForm = ({ showMap = true }: {showMap?: boolean;}) => {
               </div>
               <div className="space-y-1.5">
                 <Label htmlFor="cf-phone" className="text-white/80">Phone Number</Label>
-                <Input id="cf-phone" name="phone" type="tel" required maxLength={20} placeholder="(480) 555-0000" className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-primary/50" />
+                <Input id="cf-phone" name="phone" type="tel" required maxLength={20} placeholder="04XX XXX XXX" className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-primary/50" />
               </div>
               <div className="space-y-1.5">
                 <Label htmlFor="cf-message" className="text-white/80">Message{" "}<span className="text-white/40 font-normal">(optional)</span></Label>

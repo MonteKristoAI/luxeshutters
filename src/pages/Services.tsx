@@ -20,7 +20,7 @@ import {
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import FAQSection from "@/components/FAQSection";
 import SEOHead from "@/components/SEOHead";
-import StructuredData, { buildBreadcrumbData } from "@/components/StructuredData";
+import StructuredData, { buildBreadcrumbData, SITE_URL } from "@/components/StructuredData";
 
 import serviceShutters from "@/assets/service-shutters.jpg";
 import serviceBlinds from "@/assets/service-blinds.jpg";
@@ -222,7 +222,7 @@ export default function Services() {
         description="Premium shutters, blinds, curtains, zipscreens, awnings, and security roller shutters — custom-made and professionally installed in Temora & the Riverina."
         canonical="/services"
       />
-      <StructuredData data={buildBreadcrumbData([{ name: "Home", url: "https://luxeshutters.lovable.app/" }, { name: "Services", url: "https://luxeshutters.lovable.app/services" }])} id="ld-breadcrumb" />
+      <StructuredData data={buildBreadcrumbData([{ name: "Home", url: `${SITE_URL}/` }, { name: "Services", url: `${SITE_URL}/services` }])} id="ld-breadcrumb" />
       <Header />
 
       <section className="bg-secondary/50 pt-32 pb-14 md:pt-36 md:pb-20">

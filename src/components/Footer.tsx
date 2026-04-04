@@ -12,7 +12,7 @@ export default function Footer() {
               <span className="font-serif font-bold text-xl">{CLINIC.name}</span>
             </div>
             <p className="text-primary-foreground/60 text-sm leading-relaxed mb-6">
-              {CLINIC.slogan} Premium shutters, blinds, curtains, and outdoor screens — professionally installed across the Phoenix metro area.
+              {CLINIC.slogan} Premium shutters, blinds, curtains, and outdoor screens — professionally installed across the Temora & Riverina region.
             </p>
             <div className="flex gap-3">
               <a href="https://www.facebook.com/Luxeshutters" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-primary/30 flex items-center justify-center transition-colors"><Facebook className="w-4 h-4" /></a>
