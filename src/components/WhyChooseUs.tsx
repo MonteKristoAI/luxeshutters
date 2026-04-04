@@ -1,5 +1,5 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import whyChooseBg from "@/assets/hero-shutters.png";
+import whyChooseBg from "@/assets/hero-shutters.webp";
 
 const steps = [
   { number: "01", title: "Get in Touch With Us", body: "Request a Free Quote, Book a discovery call or Upload your plans. We will then organize a time to visit your home for a Free Measure & Quote consultation." },

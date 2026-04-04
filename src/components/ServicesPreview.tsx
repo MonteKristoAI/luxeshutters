@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-import serviceShutters from "@/assets/service-shutters.jpg";
-import serviceBlinds from "@/assets/service-blinds.jpg";
-import serviceCurtains from "@/assets/service-curtains.jpg";
-import serviceZipscreens from "@/assets/service-zipscreens.jpg";
-import serviceAwnings from "@/assets/service-awnings.jpg";
-import serviceRollerShutters from "@/assets/service-roller-shutters.jpg";
+import serviceShutters from "@/assets/service-shutters.webp";
+import serviceBlinds from "@/assets/service-blinds.webp";
+import serviceCurtains from "@/assets/service-curtains.webp";
+import serviceZipscreens from "@/assets/service-zipscreens.webp";
+import serviceAwnings from "@/assets/service-awnings.webp";
+import serviceRollerShutters from "@/assets/service-roller-shutters.webp";
 
 const services = [
   {

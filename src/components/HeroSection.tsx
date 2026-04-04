@@ -1,6 +1,6 @@
 import { ShieldCheck, Award, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-shutters.png";
+import heroImage from "@/assets/hero-shutters.webp";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const trustChips = [

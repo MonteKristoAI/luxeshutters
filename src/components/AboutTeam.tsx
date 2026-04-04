@@ -1,7 +1,7 @@
 import { MapPin } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import foundersCampbell from "@/assets/founders-campbell-claire.jpg";
-import foundersChris from "@/assets/founders-chris-amber.jpg";
+import foundersCampbell from "@/assets/founders-campbell-claire.webp";
+import foundersChris from "@/assets/founders-chris-amber.webp";
 
 export default function AboutTeam() {
   const { ref, isVisible } = useScrollAnimation();

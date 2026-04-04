@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 import { BLOG_POSTS } from "@/data/clinicData";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-import galleryWork23 from "@/assets/gallery-work-23.jpg";
-import galleryWork1 from "@/assets/gallery-work-1.jpg";
-import galleryWork20 from "@/assets/gallery-work-20.jpg";
-import galleryWork25 from "@/assets/gallery-work-25.jpg";
-import galleryWork29 from "@/assets/gallery-work-29.jpg";
-import blogBg from "@/assets/hero-shutters.png";
+import galleryWork23 from "@/assets/gallery-work-23.webp";
+import galleryWork1 from "@/assets/gallery-work-1.webp";
+import galleryWork20 from "@/assets/gallery-work-20.webp";
+import galleryWork25 from "@/assets/gallery-work-25.webp";
+import galleryWork29 from "@/assets/gallery-work-29.webp";
+import blogBg from "@/assets/hero-shutters.webp";
 
 const imageMap: Record<string, string> = {
   "blog-1": galleryWork23,
