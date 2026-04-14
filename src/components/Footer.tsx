@@ -1,7 +1,16 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from "lucide-react";
 import { CLINIC } from "@/data/clinicData";
-import { LOCATIONS } from "@/data/locationData";
+const LOCATION_LINKS = [
+  { slug: "temora", name: "Temora" },
+  { slug: "wagga-wagga", name: "Wagga Wagga" },
+  { slug: "young", name: "Young" },
+  { slug: "west-wyalong", name: "West Wyalong" },
+  { slug: "cootamundra", name: "Cootamundra" },
+  { slug: "junee", name: "Junee" },
+  { slug: "griffith", name: "Griffith" },
+  { slug: "cowra", name: "Cowra" },
+];
 
 export default function Footer() {
   return (
@@ -30,8 +39,8 @@ export default function Footer() {
             </ul>
             <h4 className="font-serif font-semibold mb-3 mt-6">Service Areas</h4>
             <ul className="space-y-1.5">
-              {LOCATIONS.map((loc) => (
-                <li key={loc.slug}><Link to={`/${loc.slug}`} className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">{loc.name}</Link></li>
+              {LOCATION_LINKS.map((loc) => (
+                <li key={loc.slug}><a href={`/${loc.slug}/`} className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">{loc.name}</a></li>
               ))}
             </ul>
           </div>
@@ -53,7 +62,7 @@ export default function Footer() {
                 <div><p>{CLINIC.hours.weekday}</p><p>{CLINIC.hours.saturday}</p><p>{CLINIC.hours.sunday}</p></div>
               </li>
             </ul>
-            <p className="text-xs text-primary-foreground/40 mt-4">Serving {LOCATIONS.map((l) => l.name).join(", ")}, and surrounding areas across regional NSW.</p>
+            <p className="text-xs text-primary-foreground/40 mt-4">Serving Temora, Wagga Wagga, Young, West Wyalong, Cootamundra, Junee, Griffith, Cowra, and surrounding areas across regional NSW.</p>
           </div>
         </div>
 

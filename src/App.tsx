@@ -10,7 +10,6 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
-import LocationPage from "./pages/LocationPage";
 import ScrollToTop from "./components/ScrollToTop";
 import FloatingCallButton from "./components/FloatingCallButton";
 import StickyCallBar from "./components/StickyCallBar";
@@ -29,7 +28,6 @@ function AppRoutes() {
         <Route path="/services" element={<Services />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/:location" element={<LocationPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
