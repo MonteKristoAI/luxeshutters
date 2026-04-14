@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from "lucide-react";
 import { CLINIC } from "@/data/clinicData";
+import { LOCATIONS } from "@/data/locationData";
 
 export default function Footer() {
   return (
@@ -27,6 +28,12 @@ export default function Footer() {
                 <li key={link}><Link to={`/${link.toLowerCase()}`} className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">{link}</Link></li>
               ))}
             </ul>
+            <h4 className="font-serif font-semibold mb-3 mt-6">Service Areas</h4>
+            <ul className="space-y-1.5">
+              {LOCATIONS.map((loc) => (
+                <li key={loc.slug}><Link to={`/${loc.slug}`} className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">{loc.name}</Link></li>
+              ))}
+            </ul>
           </div>
 
           <div>
@@ -46,7 +53,7 @@ export default function Footer() {
                 <div><p>{CLINIC.hours.weekday}</p><p>{CLINIC.hours.saturday}</p><p>{CLINIC.hours.sunday}</p></div>
               </li>
             </ul>
-            <p className="text-xs text-primary-foreground/40 mt-4">Serving Temora, Wagga Wagga, Young, West Wyalong, Cootamundra, and surrounding areas across regional NSW.</p>
+            <p className="text-xs text-primary-foreground/40 mt-4">Serving {LOCATIONS.map((l) => l.name).join(", ")}, and surrounding areas across regional NSW.</p>
           </div>
         </div>
 

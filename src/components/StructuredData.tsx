@@ -80,6 +80,8 @@ export const LOCAL_BUSINESS_DATA = {
     { "@type": "City", name: "Cootamundra" },
     { "@type": "City", name: "West Wyalong" },
     { "@type": "City", name: "Griffith" },
+    { "@type": "City", name: "Junee" },
+    { "@type": "City", name: "Cowra" },
   ],
 };
 
